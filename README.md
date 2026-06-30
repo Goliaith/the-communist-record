@@ -4,7 +4,7 @@ A clean, professional static website providing a full historical review of commu
 
 ## Run Locally
 ```powershell
-cd "E:\AI\Projects\the-communist-record"
+cd path/to/the-communist-record
 python -m http.server 8080
 ```
 Then open http://localhost:8080
@@ -29,7 +29,7 @@ A separate VIDEO-USAGE-GUIDE.md will be provided with instructions on using the 
 For educational purposes only. All content is attributed to historical sources. See the Sources page.
 
 ## Project Location
-E:\AI\Projects\the-communist-record
+/path/to/the-communist-record (example)
 
 ## Hosting / Deployment
 
@@ -43,7 +43,7 @@ Vercel is excellent for static sites, offers great performance, instant previews
 
 1. **Initialize Git** (if not already done)
    ```powershell
-   cd "E:\AI\Projects\the-communist-record"
+   cd path/to/the-communist-record
    git init
    git add .
    git commit -m "Initial commit - The Communist Record"
@@ -85,7 +85,7 @@ We included a `vercel.json` that explicitly tells Vercel to treat the folder as 
 
 ## Local Development
 ```powershell
-cd "E:\AI\Projects\the-communist-record"
+cd path/to/the-communist-record
 python -m http.server 8080
 ```
 Then open http://localhost:8080
@@ -103,20 +103,9 @@ Then open http://localhost:8080
 
 ## Local Development
 ```powershell
-cd "E:\AI\Projects\the-communist-record"
+cd path/to/the-communist-record
 python -m http.server 8080
 ```
 Open http://localhost:8080
-
-## Pages Overview
-- index.html — Main landing
-- origins.html — Philosophical roots
-- timeline.html — Historical timeline (collapsible)
-- regimes.html — Major regimes + economic analysis + charts
-- human-cost.html — Human cost with visuals and charts
-- why-it-fails.html — Why communism fails (with comparisons)
-- modern-risks.html — Modern ideological risks
-- current-groups.html — Current organizations and movements (new)
-- sources.html — Full references
 
 For video production guidance see VIDEO-USAGE-GUIDE.md (kept separate).
