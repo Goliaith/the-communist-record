@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "**/*",
-      "use": "@vercel/static"
-    }
-  ],
+  "framework": null,
+  "buildCommand": "",
+  "outputDirectory": ".",
   "routes": [
     { "src": "/(.*)", "dest": "/$1" }
   ]
