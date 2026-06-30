@@ -51,11 +51,11 @@ Vercel is excellent for static sites, offers great performance, instant previews
 
 2. **Create a GitHub repository**
    - Go to https://github.com/new
-   - Create a new **public** repository (name it something like `communist-record`)
+   - Create a new **public** repository (name it `the-communist-record`)
    - Do **NOT** initialize with README, .gitignore, or license (we already have files)
    - After creation, push your local repo:
      ```powershell
-     git remote add origin https://github.com/YOUR-USERNAME/communist-record.git
+     git remote add origin https://github.com/Goliaith/the-communist-record.git
      git branch -M main
      git push -u origin main
      ```
