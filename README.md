@@ -17,6 +17,7 @@ Then open http://localhost:8080
 - human-cost.html — Death tolls and suffering
 - why-it-fails.html — Structural reasons for failure
 - modern-risks.html — Risks to Western civilization today
+- current-groups.html — Current organizations and movements
 - sources.html — Bibliography and references
 
 ## Design
@@ -64,7 +65,7 @@ Vercel is excellent for static sites, offers great performance, instant previews
    - Go to https://vercel.com
    - Sign in with GitHub
    - Click **"Add New Project"** (or "New Project")
-   - Import your GitHub repository (`communist-record`)
+   - Import your GitHub repository (`the-communist-record`)
    - Vercel should auto-detect it as a static site
    - (Optional) Under "Build and Output Settings":
      - Build Command: leave empty
@@ -100,12 +101,5 @@ Then open http://localhost:8080
 - modern-risks.html — Modern ideological risks
 - current-groups.html — Current organizations and movements
 - sources.html — Full references
-
-## Local Development
-```powershell
-cd path/to/the-communist-record
-python -m http.server 8080
-```
-Open http://localhost:8080
 
 For video production guidance see VIDEO-USAGE-GUIDE.md (kept separate).
