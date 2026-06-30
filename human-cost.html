@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Human Cost — The Communist Record</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <style>.nav-active { background-color: #b91c1c; color: white; font-weight: 600; }</style>
+</head>
+<body class="bg-slate-950 text-slate-200">
+  <nav class="nav border-b border-slate-700 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between h-16 px-8">
+        <div class="flex items-center gap-x-3">
+          <div class="flex items-center gap-x-2">
+            <div class="w-9 h-9 bg-red-900 rounded flex items-center justify-center shadow-inner">
+              <span class="text-white font-bold text-xl">CR</span>
+            </div>
+            <span class="font-semibold text-xl tracking-tight">The Communist Record</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-x-1 text-sm">
+          <a href="index.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Home</a>
+          <a href="origins.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Origins</a>
+          <a href="timeline.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">History</a>
+          <a href="regimes.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Regimes</a>
+          <a href="human-cost.html" class="nav-active px-3 py-1.5 rounded">Human Cost</a>
+          <a href="why-it-fails.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Why It Fails</a>
+          <a href="modern-risks.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Modern Risks</a>
+          <a href="current-groups.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Current Groups</a>
+          <a href="sources.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Sources</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="max-w-5xl mx-auto px-6 pt-8 pb-16">
+    <!-- Hero -->
+    <div class="mb-10">
+      <div class="inline-block px-3 py-1 rounded-full bg-red-950 text-red-400 text-xs tracking-[1.5px] mb-3 font-mono">20TH CENTURY • UNPRECEDENTED SCALE</div>
+      <h1 class="text-5xl md:text-6xl font-bold tracking-[-2px] mb-3">The Human Cost</h1>
+      <p class="max-w-3xl text-xl text-slate-300">Communist regimes systematically killed an estimated 94–100 million people in the 20th century through executions, engineered famines, slave labor, and mass repression.</p>
+    </div>
+
+    <!-- Hero Monumental Stat + Image -->
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 mb-12 items-stretch">
+      <div class="lg:col-span-3 card flex flex-col justify-center p-8">
+        <div class="uppercase text-xs tracking-[2px] text-red-400 mb-1">DOCUMENTED IN</div>
+        <div class="text-[72px] md:text-[88px] leading-none font-black tracking-tighter text-red-500">~100M</div>
+        <div class="text-xl mt-1 text-slate-200">lives lost</div>
+        <div class="mt-4 text-sm text-slate-400 max-w-md">
+          Compiled from <em>The Black Book of Communism</em> (Courtois et al.), R.J. Rummel’s democide research, Frank Dikötter, Robert Conquest, Anne Applebaum, and archival studies. Ranges reflect debates over direct vs. policy-induced deaths.
+        </div>
+        <div class="mt-auto pt-6 text-xs text-slate-500">More than the combined civilian and combat deaths of World War I and World War II in many estimates.</div>
+      </div>
+      <div class="lg:col-span-2">
+        <div class="img-container h-full overflow-hidden rounded-2xl border border-slate-700" style="min-height: 260px;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Holodomor_Genocide_Memorial_Kyiv.JPG" alt="Holodomor Genocide Memorial, Kyiv" class="w-full h-full object-cover">
+          <div class="img-caption">Holodomor Genocide Memorial, Kyiv — one of many sites commemorating victims of deliberate famine policies.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- At-a-Glance Key Stats -->
+    <div class="mb-12">
+      <div class="uppercase text-xs tracking-[2px] text-red-400 mb-3">THE SCALE IN NUMBERS</div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="stat-card card">
+          <div class="text-4xl font-bold text-red-500">65M+</div>
+          <div class="text-xs text-slate-400 mt-1">China (Great Leap Forward + other campaigns)</div>
+        </div>
+        <div class="stat-card card">
+          <div class="text-4xl font-bold text-red-500">20M+</div>
+          <div class="text-xs text-slate-400 mt-1">Soviet Union (Holodomor, Purges, Gulag, deportations)</div>
+        </div>
+        <div class="stat-card card">
+          <div class="text-4xl font-bold text-red-500">~25%</div>
+          <div class="text-xs text-slate-400 mt-1">Cambodia’s population wiped out in under 4 years (Khmer Rouge)</div>
+        </div>
+        <div class="stat-card card">
+          <div class="text-4xl font-bold text-red-500">18M+</div>
+          <div class="text-xs text-slate-400 mt-1">Passed through Soviet Gulag; millions died</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Charts: At a Glance Visuals -->
+    <div class="mb-12">
+      <div class="flex items-end justify-between mb-3">
+        <div>
+          <div class="uppercase text-xs tracking-[2px] text-red-400">DEATH TOLLS AT A GLANCE</div>
+          <h2 class="text-2xl font-semibold tracking-tight">Major Regimes by Estimated Deaths (millions)</h2>
+        </div>
+        <div class="text-xs text-slate-500 hidden md:block">Approximate scholarly ranges • China dominates due to population scale</div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+        <!-- Bar chart -->
+        <div class="lg:col-span-3">
+          <div class="chart-container wide-chart" style="max-width:100%; padding:1rem;">
+            <canvas id="deathBar" height="140"></canvas>
+          </div>
+          <p class="text-[10px] text-slate-500 mt-1 px-1">Sources: Black Book of Communism, Dikötter, Rummel, Conquest, Applebaum, UN reports.</p>
+        </div>
+
+        <!-- Doughnut share -->
+        <div class="lg:col-span-2">
+          <div class="chart-container wide-chart" style="max-width:100%; padding:1rem;">
+            <canvas id="deathShare" height="140"></canvas>
+          </div>
+          <p class="text-[10px] text-slate-500 mt-1 px-1">Proportional share of the ~100 million total.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image-Led Atrocity Impact Grid (fully visible, no accordions) -->
+    <div class="mb-12">
+      <div class="flex items-baseline justify-between mb-4">
+        <div>
+          <h2 class="text-2xl font-semibold tracking-tight">Landmark Atrocities</h2>
+          <p class="text-sm text-slate-400">Each represents state policy on a massive scale. All numbers are scholarly estimates.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <!-- Great Leap Forward -->
+        <div class="impact-card">
+          <div class="card-media">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Chairman_Mao.jpg" alt="Mao Zedong">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 p-3 text-sm font-medium">China • 1958–1962</div>
+          </div>
+          <div class="p-4">
+            <div class="flex items-baseline gap-2">
+              <div class="death-number">30–45M+</div>
+            </div>
+            <div class="font-semibold text-lg mt-0.5">Great Leap Forward Famine</div>
+            <p class="text-sm mt-2 text-slate-300">Mao’s radical collectivization and industrial drive produced the deadliest famine in history. Grain seizures, exaggerated production reports, and punishment of “rightists” led to mass starvation. Historian Frank Dikötter documents 30–45 million deaths from famine, violence, and overwork.</p>
+            <div class="mt-3 text-xs border-l-2 border-red-900 pl-2 text-slate-400">"When there is not enough to eat, people starve to death. It is better to let half of the people die so that the other half can eat their fill." — Attributed to Mao</div>
+            <div class="meta mt-3">Frank Dikötter, <em>Mao’s Great Famine</em>; Black Book of Communism</div>
+          </div>
+        </div>
+
+        <!-- Holodomor -->
+        <div class="impact-card">
+          <div class="card-media">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Holodomor_Genocide_Memorial_Kyiv.JPG" alt="Holodomor Memorial">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 p-3 text-sm font-medium">Ukraine • 1932–1933</div>
+          </div>
+          <div class="p-4">
+            <div class="flex items-baseline gap-2">
+              <div class="death-number">3–5M+</div>
+            </div>
+            <div class="font-semibold text-lg mt-0.5">The Holodomor</div>
+            <p class="text-sm mt-2 text-slate-300">Stalin deliberately engineered famine in Ukraine by confiscating grain, blacklisting villages, and sealing borders to prevent escape. Recognized as genocide by numerous governments and scholars. Part of broader Soviet collectivization terror that also devastated Kazakhstan and other regions.</p>
+            <div class="mt-3 text-xs border-l-2 border-red-900 pl-2 text-slate-400">“They took everything... Even the seed grain. People were eating grass, bark, and in some cases, the dead.” — Survivor accounts</div>
+            <div class="meta mt-3">Robert Conquest, <em>The Harvest of Sorrow</em>; Black Book of Communism</div>
+          </div>
+        </div>
+
+        <!-- Khmer Rouge -->
+        <div class="impact-card">
+          <div class="card-media">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Choeung_Ek_the_Killing_Fields_%2811958346254%29.jpg" alt="Choeung Ek Killing Fields memorial">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 p-3 text-sm font-medium">Cambodia • 1975–1979</div>
+          </div>
+          <div class="p-4">
+            <div class="flex items-baseline gap-2">
+              <div class="death-number">1.5–2M</div>
+            </div>
+            <div class="font-semibold text-lg mt-0.5">Khmer Rouge Killing Fields</div>
+            <p class="text-sm mt-2 text-slate-300">Pol Pot’s regime emptied cities, abolished money, private property, and religion, and forced the population into agrarian collectives. Roughly one quarter of Cambodia’s people died in four years from execution, starvation, and disease. Choeung Ek and other sites became mass graves.</p>
+            <div class="mt-3 text-xs border-l-2 border-red-900 pl-2 text-slate-400">“To keep you is no benefit. To destroy you is no loss.” — Khmer Rouge slogan</div>
+            <div class="meta mt-3">Black Book of Communism; Extraordinary Chambers in the Courts of Cambodia (ECCC)</div>
+          </div>
+        </div>
+
+        <!-- Great Purge + Gulag -->
+        <div class="impact-card">
+          <div class="card-media">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/West_and_East_Germans_at_the_Brandenburg_Gate_in_1989.jpg" alt="Symbol of division and repression">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 p-3 text-sm font-medium">Soviet Union • 1930s–1950s</div>
+          </div>
+          <div class="p-4">
+            <div class="flex items-baseline gap-2">
+              <div class="death-number">~7–10M+</div>
+            </div>
+            <div class="font-semibold text-lg mt-0.5">Great Purge, Gulag &amp; Deportations</div>
+            <p class="text-sm mt-2 text-slate-300">Stalin’s terror quotas produced ~700,000–1M executions in 1937–38 alone. The Gulag forced-labor system held millions; up to 18 million passed through over decades. Ethnic deportations (Crimean Tatars, Chechens, etc.) killed hundreds of thousands. Solzhenitsyn later documented the system.</p>
+            <div class="mt-3 text-xs border-l-2 border-red-900 pl-2 text-slate-400">“The camps were a whole separate world... where the laws of normal life did not apply.” — Aleksandr Solzhenitsyn, <em>The Gulag Archipelago</em></div>
+            <div class="meta mt-3">Anne Applebaum, <em>Gulag</em>; Robert Conquest; Black Book of Communism</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Methods / Categories -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-semibold tracking-tight mb-4">Methods of Mass Death</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="card p-4">
+          <div class="text-red-400 text-sm font-semibold tracking-wide">EXECUTIONS &amp; PURGES</div>
+          <div class="mt-1 text-3xl font-bold">Millions</div>
+          <p class="mt-2 text-sm">Targeted killings of “class enemies,” political opponents, military officers, intellectuals, and quotas of suspects. Show trials, NKVD troikas, and public executions normalized terror.</p>
+          <div class="text-[10px] mt-3 text-slate-500">Examples: Great Purge (USSR), land reform campaigns (China, Vietnam)</div>
+        </div>
+        <div class="card p-4">
+          <div class="text-red-400 text-sm font-semibold tracking-wide">ENGINEERED FAMINES</div>
+          <div class="mt-1 text-3xl font-bold">~40M+</div>
+          <p class="mt-2 text-sm">Food as a weapon. Grain requisitions continued during starvation; borders sealed; villages punished for resisting collectivization. Not natural disasters.</p>
+          <div class="text-[10px] mt-3 text-slate-500">Holodomor, Great Leap Forward, North Korea 1990s</div>
+        </div>
+        <div class="card p-4">
+          <div class="text-red-400 text-sm font-semibold tracking-wide">FORCED LABOR CAMPS</div>
+          <div class="mt-1 text-3xl font-bold">Millions</div>
+          <p class="mt-2 text-sm">Gulag (USSR), Laogai (China), re-education camps (Vietnam, Cambodia). Prisoners worked to death building canals, mines, and infrastructure under lethal conditions.</p>
+          <div class="text-[10px] mt-3 text-slate-500">Up to 2–3 million in Gulag at peak; millions died</div>
+        </div>
+        <div class="card p-4">
+          <div class="text-red-400 text-sm font-semibold tracking-wide">DEPORTATIONS &amp; ETHNIC CLEANSING</div>
+          <div class="mt-1 text-3xl font-bold">Hundreds of thousands</div>
+          <p class="mt-2 text-sm">Entire peoples moved in cattle cars to remote areas with no preparation. High mortality from cold, hunger, and disease. Targeted “unreliable” ethnic groups.</p>
+          <div class="text-[10px] mt-3 text-slate-500">Crimean Tatars, Chechens, Volga Germans, Koreans in USSR</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Voices -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-semibold tracking-tight mb-4">Voices from the Record</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="callout">
+          <strong>Holodomor survivor testimony:</strong><br>
+          “The famine was a result of the policy of the Soviet government... It was not a natural disaster but a man-made one.”<br>
+          <span class="text-xs text-slate-400">— Compiled in Robert Conquest, <em>The Harvest of Sorrow</em></span>
+        </div>
+        <div class="callout">
+          <strong>Aleksandr Solzhenitsyn:</strong><br>
+          “A great writer is, so to speak, a second government in his country. And for that reason no regime has ever loved great writers, only minor ones.”<br>
+          <span class="text-xs text-slate-400">— <em>The Gulag Archipelago</em></span>
+        </div>
+        <div class="callout">
+          <strong>Great Leap Forward village accounts (Dikötter):</strong><br>
+          “In Xinyang... the death rate reached 50 per cent in some villages. People were eating the bark off trees... In some villages, everyone had died.”<br>
+          <span class="text-xs text-slate-400">— Frank Dikötter, <em>Mao’s Great Famine</em></span>
+        </div>
+        <div class="callout">
+          <strong>North Korean camp defector:</strong><br>
+          “We were like animals... Beaten for no reason, eating rats and insects to survive.”<br>
+          <span class="text-xs text-slate-400">— Multiple testimonies before UN Commission of Inquiry</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Perspective / Comparison -->
+    <div class="mb-8">
+      <h2 class="text-2xl font-semibold tracking-tight mb-3">In Perspective</h2>
+      <div class="card">
+        <p class="text-sm">Communist regimes produced the largest man-made death toll of the 20th century. For scale:</p>
+        <ul class="mt-3 text-sm space-y-1.5 list-disc pl-5">
+          <li>Nazi Germany (Holocaust + other democide + war-related civilian deaths): estimates commonly 17–25 million.</li>
+          <li>Total deaths associated with World War II (all causes): ~70–85 million.</li>
+          <li>The communist toll was concentrated in peacetime policies over decades, not battlefield combat.</li>
+        </ul>
+        <p class="mt-4 text-xs text-slate-400">Figures from R.J. Rummel <em>Death by Government</em>, Black Book of Communism, and other demographic historians. Exact comparisons involve methodological choices; the core point remains the immense scale achieved by these regimes through internal repression.</p>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> Educational purposes only. All estimates derive from peer-reviewed historical research and are subject to scholarly debate. See the Sources page for full references.
+    </div>
+  </div>
+
+  <footer class="border-t border-slate-700 py-6 text-center text-xs text-slate-500 max-w-7xl mx-auto px-8">
+    Educational use only. Communism's record should be judged by its actual results.
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script>
+    // Bar chart - deaths by regime
+    const barCtx = document.getElementById('deathBar');
+    if (barCtx) {
+      new Chart(barCtx, {
+        type: 'bar',
+        data: {
+          labels: ['China', 'USSR', 'Cambodia', 'N. Korea', 'Ethiopia', 'Afghanistan', 'Vietnam', 'E. Bloc'],
+          datasets: [{
+            label: 'Deaths (millions)',
+            data: [65, 20, 2, 2, 1.7, 1.5, 1, 1],
+            backgroundColor: '#b91c1c',
+            borderColor: '#0f172a',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            y: { beginAtZero: true, grid: { color: '#334155' }, ticks: { color: '#94a3b8' } },
+            x: { grid: { color: '#334155' }, ticks: { color: '#94a3b8', font: { size: 10 } } }
+          },
+          plugins: { legend: { display: false } }
+        }
+      });
+    }
+
+    // Doughnut - proportional share
+    const pieCtx = document.getElementById('deathShare');
+    if (pieCtx) {
+      new Chart(pieCtx, {
+        type: 'doughnut',
+        data: {
+          labels: ['China', 'USSR', 'Cambodia + NK + Others'],
+          datasets: [{
+            data: [65, 20, 15],
+            backgroundColor: ['#b91c1c', '#ef4444', '#64748b'],
+            borderColor: '#0f172a',
+            borderWidth: 2
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          cutout: '62%',
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: { color: '#cbd5e1', boxWidth: 12, padding: 12, font: { size: 11 } }
+            }
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>

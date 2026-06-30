@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Major Regimes — The Communist Record</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <style>.nav-active { background-color: #b91c1c; color: white; font-weight: 600; }</style>
+</head>
+<body class="bg-slate-950 text-slate-200">
+  <nav class="nav border-b border-slate-700 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between h-16 px-8">
+        <div class="flex items-center gap-x-3">
+          <div class="flex items-center gap-x-2">
+            <div class="w-9 h-9 bg-red-900 rounded flex items-center justify-center shadow-inner">
+              <span class="text-white font-bold text-xl">CR</span>
+            </div>
+            <span class="font-semibold text-xl tracking-tight">The Communist Record</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-x-1 text-sm">
+          <a href="index.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Home</a>
+          <a href="origins.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Origins</a>
+          <a href="timeline.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">History</a>
+          <a href="regimes.html" class="nav-active px-3 py-1.5 rounded">Regimes</a>
+          <a href="human-cost.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Human Cost</a>
+          <a href="why-it-fails.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Why It Fails</a>
+          <a href="modern-risks.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Modern Risks</a>
+          <a href="current-groups.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Current Groups</a>
+          <a href="sources.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Sources</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="max-w-5xl mx-auto px-6 pt-8 pb-16">
+    <h1 class="text-4xl font-bold tracking-tight mb-2">Major Communist Regimes</h1>
+    <p class="text-xl text-slate-300">Communist parties that seized and held state power produced remarkably consistent patterns of repression and economic failure.</p>
+
+    <!-- Visual Header Images -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+      <div class="img-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Joseph_Stalin_official_portrait.jpg" alt="Joseph Stalin" style="max-height: 220px; width: auto;">
+        <div class="img-caption">Joseph Stalin, USSR</div>
+      </div>
+      <div class="img-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Chairman_Mao.jpg" alt="Mao Zedong" style="max-height: 220px; width: auto;">
+        <div class="img-caption">Mao Zedong, China</div>
+      </div>
+      <div class="img-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/West_and_East_Germans_at_the_Brandenburg_Gate_in_1989.jpg" alt="Berlin Wall" style="max-height: 220px; width: auto;">
+        <div class="img-caption">The Berlin Wall — symbol of division</div>
+      </div>
+      <div class="img-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Lenin_1920.jpg" alt="Vladimir Lenin" style="max-height: 220px; width: auto;">
+        <div class="img-caption">Vladimir Lenin, architect of the revolution</div>
+      </div>
+    </div>
+
+    <div class="mt-8 space-y-4">
+      <!-- USSR -->
+      <div class="regime-accordion">
+        <div class="accordion-header">
+          <h2 class="text-2xl">Soviet Union (1917–1991)</h2>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="accordion-content">
+        <p>The first communist state. Under Lenin and especially Stalin, the regime established the model later copied elsewhere: one-party rule, secret police, abolition of private property, and mass terror. The USSR's history includes engineered famines, mass executions, slave labor, and expansionist policies that influenced global communism.</p>
+
+        <div class="mt-3 space-y-3">
+          <div class="callout text-sm">
+            <strong>Lenin on the Red Terror (1918):</strong><br>
+            “Let us put the speculators against the wall. ... We must make examples of these people, even if it means shooting a few dozen of them.”
+          </div>
+          <div class="callout text-sm">
+            <strong>Stalin on terror and class enemies:</strong><br>
+            “We must smash the kulaks as a class.” (During collectivization)
+          </div>
+          <div class="callout text-sm">
+            <strong>Stalin on the state:</strong><br>
+            “The state is a machine for the oppression of one class by another.”
+          </div>
+        </div>
+
+        <h3>Key Events and Policies</h3>
+        <ul class="list-disc pl-6 mt-3 text-sm">
+          <li>Red Terror and Civil War killings (1918-1922): Hundreds of thousands executed.</li>
+          <li>Holodomor: deliberate famine in Ukraine killing 3-5+ million (1932–33), recognized by many as genocide.</li>
+          <li>Great Purge (1936–38): ~700,000-1 million executed; millions to Gulag.</li>
+          <li>Gulag system: Up to 18 million passed through; millions died.</li>
+          <li>Post-war deportations of entire ethnic groups (e.g., Crimean Tatars, Chechens).</li>
+          <li>Post-WWII imposition of communism on Eastern Europe.</li>
+        </ul>
+
+        <h3>Economic Record</h3>
+        <ul class="list-disc pl-6 mt-3 text-sm">
+          <li><strong>War Communism (1918–1921):</strong> Full nationalization and grain requisitioning caused economic collapse and famine.</li>
+          <li><strong>NEP (1921–1928):</strong> Temporary market concessions led to recovery, but were reversed under Stalin.</li>
+          <li><strong>Stalin’s Five-Year Plans & Collectivization:</strong> Rapid heavy industry growth (steel, coal) at the cost of agriculture. Collectivization triggered the Holodomor and chronic food shortages.</li>
+          <li><strong>Long-term stagnation:</strong> By the 1970s–80s growth slowed dramatically. Consumer goods were scarce; black markets thrived. Central planning suffered from the calculation problem and lack of incentives.</li>
+          <li><strong>Legacy:</strong> The USSR never achieved living standards comparable to Western Europe despite vast resources. Post-1991 transition revealed deep structural weaknesses.</li>
+        </ul>
+
+        <h3>Deeper Economic Analysis</h3>
+        <p class="text-sm mt-2">The Soviet economic model was built on the abolition of private property and central direction of all production. Without market prices, planners could not calculate the relative scarcity or value of goods and resources — a problem Ludwig von Mises had predicted in 1920. Resources were allocated by political fiat rather than consumer demand, leading to massive waste: overproduction of unwanted heavy goods and chronic shortages of food, clothing, and housing.</p>
+        <p class="text-sm mt-2">Incentives were systematically destroyed. Farmers on collectives had little reason to work hard because output was taken by the state; managers had no profit motive and were punished for missing arbitrary quotas. This produced the famous "we pretend to work and they pretend to pay us" culture. Growth in the early decades came largely from mobilizing unused resources and forced labor, not from genuine productivity gains. By the 1970s the system had exhausted those sources and entered terminal stagnation.</p>
+
+        <div class="mt-3">
+          <div class="text-xs uppercase tracking-widest text-slate-400 mb-1">Illustrative Soviet GDP Growth by Period</div>
+          <div class="chart-container" style="max-width: 100%; height: 160px;">
+            <canvas id="ussrGrowthChart"></canvas>
+          </div>
+        </div>
+        <p class="text-[10px] text-slate-500 mt-1">Approximate average annual growth rates. Early gains from mobilization faded as systemic inefficiencies dominated.</p>
+
+        <p class="source mt-2">Sources: Black Book of Communism (20 million+ deaths), Robert Conquest, Anne Applebaum (Gulag), historical archives, Maddison Project data, Mises "Economic Calculation in the Socialist Commonwealth."</p>
+        </div>
+      </div>
+
+      <!-- China -->
+      <div class="regime-accordion">
+        <div class="accordion-header">
+          <h2 class="text-2xl">China (1949–present)</h2>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="accordion-content">
+        <p>The largest communist regime by population. Mao Zedong's rule produced catastrophic results through radical campaigns. Post-Mao, economic reforms under Deng Xiaoping created a hybrid system, but the CCP maintains total political control.</p>
+
+        <div class="mt-3 space-y-3">
+          <div class="callout text-sm">
+            <strong>Mao on the Great Leap Forward:</strong><br>
+            “When there is not enough to eat, people starve to death. It is better to let half of the people die so that the other half can eat their fill.” (Attributed during the famine)
+          </div>
+          <div class="callout text-sm">
+            <strong>Mao during the Cultural Revolution:</strong><br>
+            “Revolution is not a dinner party... it cannot be so refined, so leisurely and gentle... A revolution is an insurrection, an act of violence by which one class overthrows another.”
+          </div>
+          <div class="callout text-sm">
+            <strong>Mao: “Political power grows out of the barrel of a gun.”</strong>
+          </div>
+        </div>
+
+        <h3>Key Events and Policies</h3>
+        <ul class="list-disc pl-6 mt-3 text-sm">
+          <li>Land reform and early purges (1949-1952): Hundreds of thousands killed.</li>
+          <li>Great Leap Forward (1958–62): 30–45+ million dead from famine and violence (Frank Dikötter, others).</li>
+          <li>Cultural Revolution (1966–76): 1-2 million+ persecuted, tortured, killed; destruction of cultural heritage.</li>
+          <li>Laogai (reform through labor) camps: Millions detained over decades.</li>
+          <li>Tiananmen Square Massacre (1989): Hundreds to thousands killed.</li>
+          <li>Continued repression: Xinjiang re-education camps (1+ million Uyghurs), Hong Kong crackdown, zero-COVID controls.</li>
+        </ul>
+
+        <h3>Economic Record</h3>
+        <ul class="list-disc pl-6 mt-3 text-sm">
+          <li><strong>Great Leap Forward (1958–62):</strong> Forced collectivization and backyard steel production caused the deadliest famine in history. Agricultural output collapsed; industrial targets were wildly inflated.</li>
+          <li><strong>Mao era overall (1949–1976):</strong> Per capita income remained extremely low. Centralized planning led to misallocation, shortages, and repeated crises.</li>
+          <li><strong>Post-1978 Deng Xiaoping reforms:</strong> De-collectivization, township enterprises, special economic zones, and private incentives triggered average annual growth of ~9–10%. Roughly 800 million people lifted out of extreme poverty.</li>
+          <li><strong>Current system:</strong> Hybrid “socialist market economy” with heavy state-owned enterprise presence in strategic sectors. Growth has slowed; debt, property bubbles, and demographic challenges are mounting. Political control still overrides market signals.</li>
+        </ul>
+
+        <h3>Deeper Economic Analysis</h3>
+        <p class="text-sm mt-2">Mao’s policies were the purest expression of communist economic theory: abolition of private farming, total state direction of investment, and class-based persecution of “rich peasants” and experts. The result was the largest man-made famine in history because the regime had destroyed the knowledge and incentives that had sustained Chinese agriculture for centuries.</p>
+        <p class="text-sm mt-2">The post-1978 turnaround is the clearest real-world demonstration of why the “Why It Fails” analysis matters. When Deng allowed household responsibility, profit retention, and foreign investment, output exploded. The same population that had starved under full central planning became the engine of the fastest sustained growth episode in history once price signals and personal incentives were partially restored — while the Party kept ultimate political control.</p>
+
+        <div class="mt-3">
+          <div class="text-xs uppercase tracking-widest text-slate-400 mb-1">China GDP Growth: Mao Era vs. Reform Era (approximate annual average)</div>
+          <div class="chart-container" style="max-width: 100%; height: 160px;">
+            <canvas id="chinaGrowthChart"></canvas>
+          </div>
+        </div>
+        <p class="text-[10px] text-slate-500 mt-1">Data illustrative of long-run averages from historical estimates (Maddison Project / World Bank).</p>
+
+        <p class="source mt-2">Sources: Frank Dikötter, Black Book of Communism, Victims of Communism Memorial Foundation, Amnesty International reports, World Bank / Maddison data.</p>
+        </div>
+      </div>
+
+      <!-- Cambodia -->
+      <div class="regime-accordion">
+        <div class="accordion-header">
+          <h2 class="text-2xl">Cambodia — Khmer Rouge (1975–1979)</h2>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="accordion-content">
+        <p>Pol Pot’s radical attempt to create an agrarian communist society resulted in the deaths of roughly 1.5 to 2 million people in under four years — approximately one quarter of the population. "Year Zero" aimed to reset society by evacuating cities and abolishing traditional structures.</p>
+
+        <div class="mt-3">
+          <div class="callout text-sm">
+            <strong>Pol Pot on the new society:</strong><br>
+            “It is important to cleanse the people’s minds of old ideas... We must destroy the old society in order to build the new one.”
+          </div>
+          <div class="callout text-sm">
+            <strong>Pol Pot:</strong> “To keep you is no benefit. To destroy you is no loss.”
+          </div>
+        </div>
+
+        <h3>Key Policies</h3>
+        <ul class="list-disc pl-6 mt-3 text-sm">
+          <li>Evacuation of Phnom Penh and other cities.</li>
+          <li>Abolition of money, markets, private property, religion.</li>
+          <li>Forced labor in collectives; family separation.</li>
+          <li>Targeting of intellectuals, professionals, ethnic minorities (e.g., Cham Muslims).</li>
+          <li>Execution sites like the Killing Fields.</li>
+        </ul>
+
+        <h3>Economic Record</h3>
+        <ul class="list-disc pl-6 mt-3 text-sm">
+          <li><strong>Year Zero (1975):</strong> Immediate abolition of money, private property, and markets. Cities were emptied; the entire population was forced into agrarian collectives.</li>
+          <li><strong>Production collapse:</strong> Rice output plummeted due to lack of expertise, tools, and incentives. The economy essentially reverted to subsistence level.</li>
+          <li><strong>Result:</strong> One of the most rapid and complete economic destructions in modern history. Approximately 25% of the population died from starvation, disease, overwork, and execution in under four years.</li>
+          <li><strong>Legacy:</strong> After the regime’s fall, Cambodia had to rebuild from near-zero industrial and commercial base.</li>
+        </ul>
+
+        <h3>Deeper Economic Analysis</h3>
+        <p class="text-sm mt-2">The Khmer Rouge attempted the most radical experiment in communist economics: the complete elimination of money, markets, and urban life in pursuit of a pure agrarian communist society. This was not mismanagement — it was deliberate policy rooted in the same rejection of private property and price mechanisms that defined all communist regimes.</p>
+        <p class="text-sm mt-2">Without any system of economic calculation or personal reward, production predictably collapsed. Intellectuals and skilled farmers were executed as class enemies, removing the very human capital needed to sustain agriculture. The regime’s “Year Zero” was the purest demonstration of what happens when the ideas analyzed in “Why It Fails” are applied with total consistency.</p>
+
+        <div class="mt-3">
+          <div class="text-xs uppercase tracking-widest text-slate-400 mb-1">Cambodia: Population & Economic Collapse (1975–1979)</div>
+          <div class="chart-container" style="max-width: 100%; height: 160px;">
+            <canvas id="cambodiaCollapseChart"></canvas>
+          </div>
+        </div>
+        <p class="text-[10px] text-slate-500 mt-1">Approximate figures. ~25% of population perished; modern economic activity was largely destroyed.</p>
+
+        <p class="source mt-2">Sources: Black Book of Communism, documented by the Extraordinary Chambers in the Courts of Cambodia (ECCC), survivor testimonies.</p>
+        </div>
+      </div>
+
+      <!-- Cuba -->
+      <div class="regime-accordion">
+        <div class="accordion-header">
+          <h2 class="text-2xl">Cuba (1959–present)</h2>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="accordion-content">
+        <p>Fidel Castro and Che Guevara's revolution established a one-party communist state allied with the USSR. Despite claims of social progress in health and education, it featured repression, economic failure, and mass emigration.</p>
+
+        <div class="mt-3">
+          <div class="callout text-sm">
+            <strong>Che Guevara on revolutionary justice:</strong><br>
+            “A revolutionary must become a cold killing machine motivated by pure hate.”
+          </div>
+        </div>
+
+        <ul class="list-disc pl-6 mt-3 text-sm">
+          <li>Executions and labor camps post-revolution (thousands killed or imprisoned).</li>
+          <li>Suppression of dissent; political prisoners.</li>
+          <li>Economic mismanagement leading to shortages; reliance on Soviet subsidies.</li>
+          <li>Mariel boatlift (1980) and other mass exoduses.</li>
+          <li>Continued one-party rule under Raul Castro and Miguel Diaz-Canel.</li>
+        </ul>
+
+        <h3>Economic Record</h3>
+        <ul class="list-disc pl-6 mt-3 text-sm">
+          <li><strong>Central planning & nationalization:</strong> Most industry, agriculture, and services were taken over by the state. Focus on sugar monoculture for export to the Soviet bloc.</li>
+          <li><strong>Soviet subsidies:</strong> Received an estimated $4–6 billion annually (oil, machinery, guaranteed markets) — equivalent to a large share of GDP.</li>
+          <li><strong>Special Period (1991–):</strong> After the USSR collapsed, GDP fell roughly 35%. Severe shortages, blackouts, and rationing. Limited market reforms were introduced but later rolled back.</li>
+          <li><strong>Current situation:</strong> Low productivity, heavy dependence on tourism, remittances, and Venezuelan oil deals (until recent crises). GDP per capita remains modest with persistent shortages and emigration waves driven by economic hardship.</li>
+        </ul>
+
+        <h3>Deeper Economic Analysis</h3>
+        <p class="text-sm mt-2">Cuba’s economy exemplified the classic communist trade-off: the state could mobilize resources for basic health and education metrics, but it could not generate broad-based prosperity or innovation. Without private property or profit signals, agriculture and manufacturing remained inefficient and dependent on external subsidies.</p>
+        <p class="text-sm mt-2">The “Special Period” after Soviet aid ended was a natural experiment. The same centralized system that had been propped up for decades immediately produced famine-level conditions when the subsidies stopped. Limited openings to tourism and private enterprise later showed modest improvements, but every time the regime felt politically threatened it recentralized control.</p>
+
+        <p class="source mt-2">Sources: Black Book of Communism, Human Rights Watch, Cuban exile accounts, World Bank / historical economic data.</p>
+        </div>
+      </div>
+
+      <!-- North Korea -->
+      <div class="regime-accordion">
+        <div class="accordion-header">
+          <h2 class="text-2xl">North Korea (1948–present)</h2>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="accordion-content">
+        <p>The most totalitarian and isolated communist regime, evolving into a hereditary dynasty with Juche ideology (self-reliance mixed with Marxism-Leninism). Extreme personality cult, famine, and prison camps.</p>
+
+        <ul class="list-disc pl-6 mt-3 text-sm">
+          <li>1990s famine: 240,000 to 3.5 million dead (estimates vary).</li>
+          <li>Kwanliso political prison camps: 80,000-120,000 inmates; torture, forced labor, executions.</li>
+          <li>Public executions, songbun caste system based on loyalty.</li>
+          <li>Information control; no independent media or travel.</li>
+        </ul>
+
+        <h3>Economic Record</h3>
+        <ul class="list-disc pl-6 mt-3 text-sm">
+          <li><strong>Juche self-reliance & militarization:</strong> Extreme central planning combined with heavy emphasis on the military (Songun policy). Agriculture and consumer goods were neglected.</li>
+          <li><strong>1990s famine (“Arduous March”):</strong> Collapse of Soviet aid + policy failures + natural disasters caused widespread starvation. The regime responded with further repression rather than reform.</li>
+          <li><strong>Informal markets:</strong> Unofficial markets (jangmadang) have grown out of necessity, but the state periodically cracks down on them.</li>
+          <li><strong>Outcome:</strong> GDP per capita estimated around $1,000–2,000 (PPP much lower than official claims). Stark contrast with South Korea (~$35,000+). Chronic food insecurity persists for large parts of the population.</li>
+        </ul>
+
+        <h3>Deeper Economic Analysis</h3>
+        <p class="text-sm mt-2">North Korea represents the most extreme and sustained attempt at total central planning and isolation in the communist world. The Juche ideology explicitly rejected the price mechanism and international trade, while directing the bulk of resources to the military. The result was predictable: repeated famines and technological backwardness.</p>
+        <p class="text-sm mt-2">The only thing that has kept the system from total collapse is the limited tolerance of informal markets and outside aid. Every time the regime tries to reassert full control, production and living standards drop further. The divergence with South Korea — starting from similar levels in 1950 — is one of the clearest natural experiments in economic systems in history.</p>
+
+        <p class="source mt-2">Sources: UN Commission of Inquiry on Human Rights in North Korea, Black Book of Communism, defector testimonies (e.g., Yeonmi Park, Shin Dong-hyuk), economic estimates from various research institutes.</p>
+        </div>
+      </div>
+
+      <!-- Vietnam -->
+      <div class="regime-accordion">
+        <div class="accordion-header">
+          <h2 class="text-2xl">Vietnam (North 1954–, Unified 1975–present)</h2>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="accordion-content">
+        <p>Communist victory in the Vietnam War led to re-education camps, economic collectivization, and boat people crisis. Later Doi Moi reforms introduced markets while keeping party control.</p>
+        <ul class="list-disc pl-6 mt-3 text-sm">
+          <li>Re-education camps post-1975: Hundreds of thousands detained.</li>
+          <li>Boat people: 1-2 million fled; many died at sea.</li>
+          <li>Land reform in North (1950s): Tens of thousands executed.</li>
+        </ul>
+
+        <h3>Economic Record</h3>
+        <ul class="list-disc pl-6 mt-3 text-sm">
+          <li><strong>Post-1975 collectivization:</strong> Rapid imposition of central planning and collective farms led to agricultural stagnation and food shortages.</li>
+          <li><strong>Economic crisis of the 1980s:</strong> Hyperinflation, shortages, and declining living standards prompted the 1986 Doi Moi (“Renovation”) reforms.</li>
+          <li><strong>Doi Moi reforms:</strong> Allowed private enterprise, foreign investment, and market prices in many sectors while retaining Communist Party political monopoly. Average annual growth since the late 1980s has been around 6–8%.</li>
+          <li><strong>Outcome:</strong> Poverty rate dropped dramatically (from over 70% in the 1980s to single digits). Vietnam became a major exporter and middle-income country. However, state-owned enterprises remain influential and corruption is widespread.</li>
+        </ul>
+
+        <h3>Deeper Economic Analysis</h3>
+        <p class="text-sm mt-2">Vietnam’s post-unification attempt to impose full central planning produced the familiar results: falling production, food shortages, and economic crisis. The 1986 Doi Moi reforms were a pragmatic retreat from pure communist economics — allowing private farming, markets, and foreign capital while keeping the Party in charge.</p>
+        <p class="text-sm mt-2">The contrast with the pre-reform period is dramatic. Growth took off once households could keep much of what they produced and prices began to reflect scarcity. This is the same pattern seen in China after 1978: the more the regime allowed elements of private property and market coordination, the better economic performance became — while political repression remained.</p>
+
+        <p class="source mt-2">Sources: Black Book of Communism, human rights reports, World Bank development data.</p>
+        </div>
+      </div>
+
+      <!-- Eastern Europe -->
+      <div class="regime-accordion">
+        <div class="accordion-header">
+          <h2 class="text-2xl">Eastern Europe (1945–1989/91)</h2>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="accordion-content">
+        <p>Soviet-imposed regimes in Poland, East Germany, Czechoslovakia, Hungary, Romania, Bulgaria, Albania. Varied repression, economic stagnation, secret police (e.g., Stasi, Securitate).</p>
+        <ul class="list-disc pl-6 mt-3 text-sm">
+          <li>1956 Hungarian Revolution crushed.</li>
+          <li>1968 Prague Spring invasion.</li>
+          <li>Romania under Ceausescu: Cult of personality, 1989 revolution violent.</li>
+          <li>Berlin Wall and escape attempts.</li>
+          <li>Secret police files on millions; dissident persecution.</li>
+        </ul>
+
+        <h3>Economic Record</h3>
+        <ul class="list-disc pl-6 mt-3 text-sm">
+          <li><strong>Central planning under Comecon:</strong> Economies were integrated with the Soviet Union. Heavy industry was prioritized; consumer goods and innovation lagged.</li>
+          <li><strong>Chronic shortages and inefficiency:</strong> By the 1970s–80s most countries experienced stagnation or decline. Black markets and informal economies became essential.</li>
+          <li><strong>East vs. West Germany example:</strong> In 1936 living standards were similar. By 1989 West German GDP per capita was roughly three times higher.</li>
+          <li><strong>Post-1989 transitions:</strong> Countries that introduced market reforms (Poland, Hungary, Baltic states) saw rapid catch-up growth. Romania and Bulgaria lagged due to slower reforms and corruption.</li>
+        </ul>
+
+        <h3>Deeper Economic Analysis</h3>
+        <p class="text-sm mt-2">The Eastern Bloc economies were textbook examples of the calculation and incentive problems inherent in central planning. Without genuine prices, investment decisions were arbitrary; without private property, there was little reason to innovate or maintain capital stock efficiently. Consumer goods were rationed by queues rather than prices.</p>
+        <p class="text-sm mt-2">The post-1989 record is telling. Nations that rapidly introduced private property, price liberalization, and trade openness (the Baltic states, Poland, Czech Republic) experienced strong convergence with Western Europe. Those that delayed or retained more state control lagged. This divergence occurred among countries that had shared the same communist economic system for decades, isolating the effect of the institutional changes.</p>
+
+        <p class="source mt-2">Sources: Black Book of Communism (1+ million in bloc), Anne Applebaum (Iron Curtain), individual country histories, Maddison Project / World Bank data.</p>
+        </div>
+      </div>
+
+      <!-- Venezuela -->
+      <div class="regime-accordion">
+        <div class="accordion-header">
+          <h2 class="text-2xl">Venezuela (1999–present, "21st Century Socialism")</h2>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="accordion-content">
+        <p>Hugo Chávez and Nicolás Maduro's socialist project led to economic collapse, hyperinflation, mass poverty, and authoritarianism despite vast oil wealth. Often cited as modern example of socialist failure.</p>
+        <ul class="list-disc pl-6 mt-3 text-sm">
+          <li>Hyperinflation over 1 million %; GDP collapse >75%.</li>
+          <li>Mass emigration: 7+ million fled.</li>
+          <li>Political repression, arbitrary arrests.</li>
+          <li>Shortages of food and medicine.</li>
+        </ul>
+
+        <h3>Economic Record</h3>
+        <ul class="list-disc pl-6 mt-3 text-sm">
+          <li><strong>“21st Century Socialism” policies:</strong> Widespread nationalizations of oil, agriculture, industry, and services. Price controls, currency controls, and expropriations.</li>
+          <li><strong>Oil dependency mismanagement:</strong> When oil prices fell after 2014, the lack of diversified economy and productive private sector caused collapse.</li>
+          <li><strong>Hyperinflation and contraction:</strong> Inflation reached over one million percent; GDP fell more than 75% between 2013 and the early 2020s. Poverty and malnutrition surged.</li>
+          <li><strong>Current status:</strong> Partial dollarization and limited reforms have stabilized some areas, but the economy remains deeply damaged and heavily state-controlled.</li>
+        </ul>
+
+        <h3>Deeper Economic Analysis</h3>
+        <p class="text-sm mt-2">Venezuela’s collapse under “21st Century Socialism” is a modern laboratory for the same mechanisms that destroyed earlier communist economies. Massive expropriations eliminated private incentives in agriculture and industry. Price and currency controls destroyed the information function of prices, producing shortages and black markets almost immediately.</p>
+        <p class="text-sm mt-2">The regime responded to economic failure the same way previous communist states did: by blaming “saboteurs,” increasing repression, and doubling down on controls rather than liberalizing. The result was the fastest peacetime economic and humanitarian collapse in Latin American history. Even with the world’s largest oil reserves, the absence of secure property rights and market coordination proved economically fatal.</p>
+
+        <p class="source mt-2">Sources: IMF/World Bank data, Human Rights Watch, UNHCR reports.</p>
+        </div>
+      </div>
+
+      <div class="regime-accordion">
+        <div class="accordion-header">
+          <span class="font-semibold">Other Notable Cases and Influences</span>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="accordion-content text-sm">
+          <ul class="list-disc pl-6 space-y-2 mt-2">
+            <li><strong>Ethiopia (Derg regime, 1974-1991)</strong>: Red Terror; ~500,000+ killed or starved. Forced collectivization and villagization caused agricultural collapse and famine.</li>
+            <li><strong>Afghanistan (1978-1992 communist phase)</strong>: Repression and war deaths. Centralized planning and land reforms contributed to economic disruption amid conflict.</li>
+            <li><strong>Laos, Mongolia</strong>: Similar patterns of one-party rule, collectivization, and chronic economic underperformance followed by partial market reforms in later decades.</li>
+            <li>Global influence via Comintern, proxy wars, and ideological export often accompanied economic aid models that produced similar planning failures.</li>
+          </ul>
+
+          <h3>Deeper Economic Analysis (Pattern Across Cases)</h3>
+          <p class="text-sm mt-2">In every case — from the Derg’s villagization in Ethiopia to the communist experiments in Afghanistan, Laos, and Mongolia — the same core problems recurred: destruction of private incentives, elimination of price signals, and political allocation of resources. Agricultural output fell, shortages became chronic, and growth, when it occurred, was usually the result of later market-oriented reforms rather than the original communist model.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="disclaimer mt-12">
+      Educational purposes only. Summaries are based on historical scholarship. Full references on the Sources page.
+    </div>
+  </div>
+
+  <footer class="border-t border-slate-700 py-6 text-center text-xs text-slate-500 max-w-7xl mx-auto px-8">
+    Educational use only. Communism's record should be judged by its actual results.
+  </footer>
+
+  <script src="js/nav.js"></script>
+
+  <script>
+    // USSR Growth Chart
+    const ussrCtx = document.getElementById('ussrGrowthChart');
+    if (ussrCtx) {
+      new Chart(ussrCtx, {
+        type: 'bar',
+        data: {
+          labels: ['1930s-50s (Mobilization)', '1960s', '1970s', '1980s (Stagnation)'],
+          datasets: [{
+            label: 'Approx. Annual GDP Growth %',
+            data: [12, 6.5, 3.5, 1.5],
+            backgroundColor: '#b91c1c',
+            borderColor: '#0f172a',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            y: { beginAtZero: true, grid: { color: '#334155' }, ticks: { color: '#94a3b8' } },
+            x: { grid: { color: '#334155' }, ticks: { color: '#94a3b8', font: { size: 10 } } }
+          },
+          plugins: { legend: { display: false } }
+        }
+      });
+    }
+
+    // China Growth Comparison
+    const chinaCtx = document.getElementById('chinaGrowthChart');
+    if (chinaCtx) {
+      new Chart(chinaCtx, {
+        type: 'bar',
+        data: {
+          labels: ['Mao Era (1949-1976 avg)', 'Reform Era (1978-2018 avg)'],
+          datasets: [{
+            label: 'Average Annual GDP Growth %',
+            data: [4.4, 9.5],
+            backgroundColor: ['#64748b', '#22c55e'],
+            borderColor: '#0f172a',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            y: { beginAtZero: true, grid: { color: '#334155' }, ticks: { color: '#94a3b8' } },
+            x: { grid: { color: '#334155' }, ticks: { color: '#94a3b8', font: { size: 10 } } }
+          },
+          plugins: { legend: { display: false } }
+        }
+      });
+    }
+
+    // Cambodia Collapse (illustrative)
+    const cambodiaCtx = document.getElementById('cambodiaCollapseChart');
+    if (cambodiaCtx) {
+      new Chart(cambodiaCtx, {
+        type: 'bar',
+        data: {
+          labels: ['Pre-1975 (baseline)', '1979 (post-Khmer Rouge)'],
+          datasets: [{
+            label: 'Relative Economic Output / Capacity',
+            data: [100, 20],
+            backgroundColor: ['#22c55e', '#b91c1c'],
+            borderColor: '#0f172a',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            y: { beginAtZero: true, grid: { color: '#334155' }, ticks: { color: '#94a3b8' } },
+            x: { grid: { color: '#334155' }, ticks: { color: '#94a3b8', font: { size: 10 } } }
+          },
+          plugins: { legend: { display: false } }
+        }
+      });
+    }
+  </script>
+</body>
+</html>

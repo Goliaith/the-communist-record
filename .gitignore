@@ -1,0 +1,13 @@
+﻿# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Local env / build artifacts (if any added later)
+node_modules/
+dist/
+build/
+.vercel/

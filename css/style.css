@@ -1,0 +1,526 @@
+/* The Communist Record - Polished, professional, elegant dark theme */
+:root {
+  --bg: #0f172a;
+  --bg-elev: #1e293b;
+  --bg-panel: #1e293b;
+  --border: #334155;
+  --border-light: #475569;
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+  --text-strong: #f1f5f9;
+  --accent: #b91c1c;
+  --accent-light: #ef4444;
+  --accent-subtle: #7f1d1d;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #0f172a;
+  color: #e2e8f0;
+  line-height: 1.7;
+}
+
+/* Modern Typography */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  line-height: 1.15;
+  color: #f1f5f9;
+  letter-spacing: -0.025em;
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3rem); }
+h2 { font-size: clamp(1.5rem, 4vw, 2rem); margin-top: 2rem; }
+h3 { font-size: 1.25rem; margin-top: 1.5rem; }
+
+p {
+  margin-bottom: 1rem;
+  max-width: 72ch;
+}
+
+a {
+  color: #60a5fa;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: #93c5fd;
+  text-decoration: underline;
+}
+
+/* Navigation - elegant and sticky */
+.nav {
+  background-color: #1e293b;
+  border-bottom: 1px solid #334155;
+  backdrop-filter: blur(8px);
+}
+
+.nav a {
+  color: #cbd5e1;
+  padding: 0.5rem 0.875rem;
+  border-radius: 0.375rem;
+  transition: all 0.15s ease;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  background-color: #334155;
+  color: #f1f5f9;
+  text-decoration: none;
+}
+
+.nav a.active {
+  background-color: #b91c1c;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* Modern Cards - depth, polish, at-a-glance */
+.card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  border-color: #475569;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.stat-card .number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.infographic {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  border: 1px solid #475569;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+/* Callouts and Quotes - modern emphasis */
+.callout {
+  background-color: #1e293b;
+  border-left: 6px solid #b91c1c;
+  padding: 1.25rem 1.5rem;
+  margin: 1.25rem 0;
+  border-radius: 0.75rem;
+  position: relative;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.quote {
+  border-left: 4px solid #64748b;
+  padding-left: 1rem;
+  font-style: italic;
+  color: #cbd5e1;
+}
+
+/* Images - modern with captions */
+.img-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  border: 1px solid #334155;
+  background: #1e293b;
+}
+
+.img-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.img-container:hover img {
+  transform: scale(1.03);
+}
+
+.img-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(15, 23, 42, 0.95));
+  padding: 0.75rem 1rem;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.source {
+  font-size: 0.8rem;
+  color: #64748b;
+  font-style: normal;
+}
+
+.disclaimer {
+  font-size: 0.75rem;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  padding: 0.875rem 1.125rem;
+  border-radius: 0.5rem;
+  color: #64748b;
+  border-left: 3px solid #475569;
+}
+
+/* Stats and Hero elements */
+.hero-stat {
+  font-size: 3.75rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #f1f5f9;
+  letter-spacing: -0.05em;
+}
+
+.stat {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #f1f5f9;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #334155;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background-color: #1e293b;
+  color: #cbd5e1;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+tr:hover td {
+  background-color: #1e293b;
+}
+
+/* Section container */
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: #b91c1c;
+  color: white;
+  border: 1px solid #b91c1c;
+}
+
+.btn-primary:hover {
+  background-color: #7f1d1d;
+  border-color: #7f1d1d;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #cbd5e1;
+  border: 1px solid #475569;
+}
+
+.btn-secondary:hover {
+  background-color: #334155;
+  border-color: #64748b;
+  text-decoration: none;
+}
+
+/* Subtle decorative elements */
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #334155, transparent);
+  margin: 2rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section { padding: 1.5rem 1rem; }
+  h1 { font-size: 2rem; }
+  .hero-stat { font-size: 2.75rem; }
+  .card { padding: 1.25rem; }
+}
+
+/* Print friendly */
+@media print {
+  body { background: white; color: black; }
+  .nav, .disclaimer { display: none; }
+  .card, .callout { border: 1px solid #ccc; box-shadow: none; }
+}
+
+/* Visual Timeline - Collapsible */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(#b91c1c, #334155);
+  border-radius: 9999px;
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 1rem;
+  padding-left: 50px;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 12px;
+  width: 20px;
+  height: 20px;
+  background: #0f172a;
+  border: 4px solid #b91c1c;
+  border-radius: 9999px;
+  z-index: 1;
+}
+
+/* Collapsible header bar */
+.timeline .accordion-header {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 0.5rem;
+  padding: 0.6rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+}
+.timeline .accordion-header:hover {
+  background-color: #334155;
+}
+.timeline .accordion-header .year {
+  font-weight: 700;
+  color: #fca5a5;
+  min-width: 95px;
+  flex-shrink: 0;
+  font-size: 0.9rem;
+}
+.timeline .accordion-header .title {
+  flex: 1;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+.timeline .accordion-header .arrow {
+  margin-left: auto;
+  transition: transform 0.3s ease;
+  color: #64748b;
+}
+.timeline .accordion-header.open .arrow {
+  transform: rotate(180deg);
+}
+
+.timeline .accordion-content {
+  margin-left: 0.5rem;
+  padding-left: 1rem;
+  border-left: 2px solid #475569;
+  margin-top: 0.25rem;
+}
+
+/* Charts */
+.chart-container {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  margin: 0.75rem auto;
+  max-width: 320px;
+}
+
+.wide-chart {
+  max-width: 100%;
+}
+
+/* Slightly roomier charts on data-heavy pages */
+.chart-container canvas {
+  max-height: 220px;
+}
+
+/* Impact / Memorial style cards for Human Cost (distinct visual treatment) */
+.impact-card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.impact-card:hover {
+  transform: translateY(-2px);
+  border-color: #475569;
+}
+
+.impact-card .card-media {
+  position: relative;
+  height: 160px;
+  background: #0f172a;
+  overflow: hidden;
+}
+
+@media (max-width: 640px) {
+  .impact-card .card-media { height: 140px; }
+}
+
+.impact-card .card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.impact-card .death-number {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #fca5a5;
+  line-height: 1;
+}
+
+.impact-card .meta {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+/* Reason / Theory cards for Why It Fails - clean, scannable, at-a-glance */
+.reason-card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  transition: all 0.2s ease;
+}
+
+.reason-card:hover {
+  border-color: #475569;
+  transform: translateY(-1px);
+}
+
+.reason-card .reason-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 0.5rem;
+}
+
+.reason-card .quote {
+  font-size: 0.875rem;
+  border-left: 3px solid #b91c1c;
+  padding-left: 0.75rem;
+  margin-top: 0.75rem;
+  color: #cbd5e1;
+}
+
+/* At-a-glance infographics */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+.stat-item {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+}
+.stat-number {
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1;
+}
+.stat-label {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-top: 0.25rem;
+}
+
+/* Accordion - for regimes etc. */
+.accordion-header {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 0.5rem;
+  margin-bottom: 0.25rem;
+  transition: all 0.2s ease;
+}
+
+.accordion-header:hover {
+  background-color: #334155;
+  border-color: #475569;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease-out;
+  padding: 0 0.75rem;
+  margin-bottom: 0.75rem;
+  box-sizing: border-box;
+}
+
+.accordion-content.open {
+  padding-top: 0.75rem;
+  padding-bottom: 1.5rem; /* generous bottom padding to prevent text cutoff */
+}
+
+/* Ensure last element inside doesn't push beyond our padding */
+.accordion-content > *:last-child {
+  margin-bottom: 0;
+}
+
+.accordion-header .arrow {
+  transition: transform 0.3s ease;
+  font-size: 0.8rem;
+}
+
+.accordion-header.open .arrow {
+  transform: rotate(180deg);
+}
