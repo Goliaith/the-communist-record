@@ -5,57 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sources — The Communist Record</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=20260704a">
   <style>.nav-active { background-color: #b91c1c; color: white; font-weight: 600; }</style>
 </head>
 <body class="bg-slate-950 text-slate-200">
-  <nav class="nav border-b border-slate-700 sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto">
-      <div class="flex items-center justify-between h-16 px-8">
-        <div class="flex items-center gap-x-3">
-          <div class="flex items-center gap-x-2">
-            <div class="w-9 h-9 bg-red-900 rounded flex items-center justify-center shadow-inner">
-              <span class="text-white font-bold text-xl">CR</span>
-            </div>
-            <span class="font-semibold text-xl tracking-tight">The Communist Record</span>
-          </div>
-        </div>
-        <div class="flex items-center gap-x-2 text-sm">
-          <a href="index.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Home</a>
-
-          <!-- Historical Record Dropdown -->
-          <div class="relative group">
-            <div class="px-3 py-1.5 hover:bg-slate-800 rounded cursor-pointer flex items-center gap-1 select-none">
-              Historical Record
-              <span class="text-xs opacity-70">▼</span>
-            </div>
-            <div class="absolute left-0 top-full hidden group-hover:block bg-slate-900 border border-slate-700 rounded-xl shadow-xl w-48 z-50 py-1">
-              <a href="origins.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Origins</a>
-              <a href="timeline.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Timeline</a>
-              <a href="regimes.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Regimes</a>
-              <a href="human-cost.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Human Cost</a>
-              <a href="why-it-fails.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Why It Fails</a>
-            </div>
-          </div>
-
-          <!-- Modern Context Dropdown -->
-          <div class="relative group">
-            <div class="px-3 py-1.5 hover:bg-slate-800 rounded cursor-pointer flex items-center gap-1 select-none">
-              Modern Context
-              <span class="text-xs opacity-70">▼</span>
-            </div>
-            <div class="absolute left-0 top-full hidden group-hover:block bg-slate-900 border border-slate-700 rounded-xl shadow-xl w-48 z-50 py-1">
-              <a href="modern-risks.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Modern Risks</a>
-              <a href="current-groups.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Current Groups</a>
-              <a href="funding.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Funding</a>
-            </div>
-          </div>
-
-          <a href="sources.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Sources</a>
-        </div>
-      </div>
-    </div>
-  </nav>
+  <div id="site-nav"></div>
 
   <div class="max-w-5xl mx-auto px-6 pt-8 pb-16">
     <h1 class="text-4xl font-bold tracking-tight mb-4">Sources & References</h1>
@@ -126,6 +80,21 @@
       </ul>
     </div>
 
+    <div class="mt-6">
+      <h2>Image Credits</h2>
+      <ul class="list-disc pl-6 space-y-1 text-sm">
+        <li>Karl Marx portrait — John Jabez Edwin Mayall, public domain, via Wikimedia Commons.</li>
+        <li>Joseph Stalin portrait — Ivan Shagin, public domain, via Wikimedia Commons.</li>
+        <li>Mao Zedong official portrait — public domain, via Wikimedia Commons.</li>
+        <li>Vladimir Lenin (1920) — Pavel Zhukov, public domain, via Wikimedia Commons.</li>
+        <li>West and East Germans at the Brandenburg Gate, 1989 — Lear 21 at English Wikipedia, CC BY-SA 3.0, via Wikimedia Commons.</li>
+        <li>Holodomor Genocide Memorial, Kyiv — Andriy155, CC BY 3.0, via Wikimedia Commons.</li>
+        <li>Choeung Ek "Killing Fields" memorial — Clay Gilliland, CC BY-SA 2.0, via Wikimedia Commons.</li>
+      </ul>
+    </div>
+
+    </div><!-- /sources-list -->
+
     <p class="mt-8 text-sm text-slate-400">This list is not exhaustive. Readers are encouraged to consult the original texts and multiple historians.</p>
 
     <div class="disclaimer mt-8">
@@ -141,6 +110,6 @@
     Educational use only. Communism's record should be judged by its actual results.
   </footer>
 
-  <script src="js/nav.js"></script>
+  <script src="js/nav.js?v=20260704a"></script>
 </body>
 </html>

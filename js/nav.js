@@ -1,23 +1,117 @@
-// Shared navigation active state + polish interactions
+// Shared navigation: single source of truth rendered into <div id="site-nav"> on every page,
+// plus active state + polish interactions.
+const NAV_HTML = `
+<nav class="nav border-b border-slate-700 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex items-center justify-between h-16 px-4 md:px-8">
+      <a href="index.html" class="nav-brand flex items-center gap-x-2">
+        <span class="w-9 h-9 bg-red-900 rounded flex items-center justify-center shadow-inner text-white font-bold text-xl">CR</span>
+        <span class="font-semibold text-lg md:text-xl tracking-tight text-slate-100">The Communist Record</span>
+      </a>
+
+      <div class="nav-desktop items-center gap-x-2 text-sm">
+        <a href="index.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Home</a>
+
+        <div class="relative group">
+          <div class="px-3 py-1.5 hover:bg-slate-800 rounded cursor-pointer flex items-center gap-1 select-none">
+            Historical Record
+            <span class="text-xs opacity-70">▼</span>
+          </div>
+          <div class="absolute left-0 top-full hidden bg-slate-900 border border-slate-700 rounded-xl shadow-xl w-48 z-50 py-1">
+            <a href="origins.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Origins</a>
+            <a href="timeline.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Timeline</a>
+            <a href="regimes.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Regimes</a>
+            <a href="human-cost.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Human Cost</a>
+            <a href="why-it-fails.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Why It Fails</a>
+          </div>
+        </div>
+
+        <div class="relative group">
+          <div class="px-3 py-1.5 hover:bg-slate-800 rounded cursor-pointer flex items-center gap-1 select-none">
+            Modern Context
+            <span class="text-xs opacity-70">▼</span>
+          </div>
+          <div class="absolute left-0 top-full hidden bg-slate-900 border border-slate-700 rounded-xl shadow-xl w-48 z-50 py-1">
+            <a href="modern-risks.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Modern Risks</a>
+            <a href="current-groups.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Current Groups</a>
+            <a href="funding.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Funding</a>
+          </div>
+        </div>
+
+        <a href="sources.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Sources</a>
+
+        <input id="nav-search" type="text" placeholder="Search site..." class="ml-2 text-xs bg-slate-900 border border-slate-700 focus:border-red-800 px-3 py-1 rounded w-28 focus:w-40 transition-all outline-none">
+        <button id="nav-search-btn" class="px-2 py-1 hover:bg-slate-800 rounded text-sm" title="Search">🔍</button>
+      </div>
+
+      <button id="nav-toggle" class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+
+    <div id="nav-mobile" class="nav-mobile">
+      <a href="index.html">Home</a>
+      <div class="nav-mobile-label">Historical Record</div>
+      <a href="origins.html">Origins</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="regimes.html">Regimes</a>
+      <a href="human-cost.html">Human Cost</a>
+      <a href="why-it-fails.html">Why It Fails</a>
+      <div class="nav-mobile-label">Modern Context</div>
+      <a href="modern-risks.html">Modern Risks</a>
+      <a href="current-groups.html">Current Groups</a>
+      <a href="funding.html">Funding</a>
+      <div class="nav-mobile-label">Resources</div>
+      <a href="sources.html">Sources</a>
+      <button id="nav-mobile-search">🔍 Search the site</button>
+    </div>
+  </div>
+</nav>`;
+
+(function renderNav() {
+  const mount = document.getElementById('site-nav');
+  if (mount) mount.outerHTML = NAV_HTML;
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   
   document.querySelectorAll('nav a').forEach(link => {
+    if (link.classList.contains('nav-brand')) return;
     const href = link.getAttribute('href');
     if (href === currentPage) {
       link.classList.add('nav-active');
     }
   });
 
-  // Add search icon to nav for modern UX (global)
-  const navFlex = document.querySelector('nav .flex.items-center.gap-x-2') || document.querySelector('nav .flex.items-center');
-  if (navFlex) {
-    const searchIcon = document.createElement('button');
-    searchIcon.innerHTML = '🔍';
-    searchIcon.className = 'px-2 py-1 hover:bg-slate-800 rounded text-sm';
-    searchIcon.title = 'Search';
-    searchIcon.onclick = window.openSearchModal;
-    navFlex.appendChild(searchIcon);
+  // Mobile hamburger toggle
+  const navToggle = document.getElementById('nav-toggle');
+  const navMobile = document.getElementById('nav-mobile');
+  if (navToggle && navMobile) {
+    navToggle.addEventListener('click', () => {
+      const open = navMobile.classList.toggle('open');
+      navToggle.textContent = open ? '✕' : '☰';
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+  }
+
+  // Search: icon button opens the modal; typing in the nav box + Enter opens it prefilled
+  const searchBtn = document.getElementById('nav-search-btn');
+  if (searchBtn) searchBtn.addEventListener('click', () => window.openSearchModal());
+
+  const mobileSearch = document.getElementById('nav-mobile-search');
+  if (mobileSearch) mobileSearch.addEventListener('click', () => {
+    navMobile.classList.remove('open');
+    if (navToggle) navToggle.textContent = '☰';
+    window.openSearchModal();
+  });
+
+  const navSearch = document.getElementById('nav-search');
+  if (navSearch) {
+    navSearch.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && navSearch.value.trim()) {
+        window.openSearchModal(navSearch.value.trim());
+      }
+    });
   }
 
   // Highlight dropdown parents when a child link is active
@@ -238,19 +332,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Home journey filter via search input and buttons
   window.filterJourney = function(type) {
-    const cards = document.querySelectorAll('#journey .grid a');
-    cards.forEach(card => {
-      const text = card.textContent.toLowerCase();
-      let show = true;
-      if (type === 'historical') show = !text.includes('modern') && !text.includes('dsa') && !text.includes('funding');
-      if (type === 'modern') show = text.includes('modern') || text.includes('dsa') || text.includes('funding');
+    document.querySelectorAll('#journey-grid a').forEach(card => {
+      const show = type === 'all' || card.dataset.cat === type;
       card.style.display = show ? '' : 'none';
     });
   };
 
-  const homeSearch = document.querySelector('input[placeholder*="Search site"]');
+  const homeSearch = document.getElementById('nav-search');
   if (homeSearch && (window.location.pathname.endsWith('index.html') || window.location.pathname === '/')) {
-    const journeyCards = document.querySelectorAll('#journey .grid a');
+    const journeyCards = document.querySelectorAll('#journey-grid a');
     homeSearch.addEventListener('input', () => {
       const term = homeSearch.value.toLowerCase();
       journeyCards.forEach(card => {
@@ -282,7 +372,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "China's Great Leap Forward alone caused 30-45 million deaths in just a few years through famine.",
       "The Soviet Gulag system held up to 18 million people; millions died from starvation, cold, and overwork.",
       "Cambodia's Khmer Rouge killed about 2 million — a quarter of the population — in under 4 years.",
-      "No Nobel Prizes in science came from purely centrally planned economies during their peak.",
+      "Everywhere a ruling communist party finally allowed a free vote — Poland 1989, Nicaragua 1990 — it lost.",
       "China lifted 800M+ from poverty only AFTER introducing market reforms and private incentives.",
       "The 'long march through the institutions' strategy was explicitly outlined by Gramsci and adopted by modern radicals."
     ];
@@ -355,12 +445,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Simple global search modal for modern UX
-  window.openSearchModal = function() {
+  // Simple global search modal for modern UX (optionally prefilled with a query)
+  window.openSearchModal = function(prefill) {
     let modal = document.getElementById('search-modal');
     if (modal) {
       modal.style.display = 'flex';
-      modal.querySelector('input').focus();
+      const existingInput = modal.querySelector('input');
+      if (prefill) {
+        existingInput.value = prefill;
+        existingInput.dispatchEvent(new Event('input'));
+      }
+      existingInput.focus();
       return;
     }
 
@@ -411,6 +506,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Close on outside click
     modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
+    if (prefill) {
+      input.value = prefill;
+      input.oninput();
+    }
     input.focus();
   };
 

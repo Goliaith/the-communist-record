@@ -24,7 +24,7 @@ Then open http://localhost:8080
 Dark, serious, highly readable theme. Tailwind via CDN. Fully static.
 
 ## After Completion
-A separate VIDEO-USAGE-GUIDE.md will be provided with instructions on using the site for video production. This guide is intentionally kept out of the public website.
+A separate video usage guide lives in `internal/` (not committed or deployed) with instructions on using the site for video production.
 
 ## Recent Redesign (2026)
 The site received a modern audience attention-focused refresh:
@@ -45,7 +45,7 @@ The site received a modern audience attention-focused refresh:
 - Visual Journey filters by historical/modern
 - **New: Dismissible "What's New" banner** on homepage (remembers via localStorage)
 
-See REDESIGN-PROPOSAL.md for the full analysis and vision.
+The full redesign analysis lives in `internal/` (not committed or deployed).
 
 ## Disclaimer
 For educational purposes only. All content is attributed to historical sources. See the Sources page.
@@ -77,7 +77,7 @@ Vercel is excellent for static sites, offers great performance, instant previews
    - Do **NOT** initialize with README, .gitignore, or license (we already have files)
    - After creation, push your local repo:
      ```powershell
-     git remote add origin https://github.com/Goliaith/the-communist-record.git
+     git remote add origin https://github.com/<your-username>/the-communist-record.git
      git branch -M main
      git push -u origin main
      ```
@@ -123,4 +123,4 @@ Then open http://localhost:8080
 - current-groups.html — Current organizations and movements
 - sources.html — Full references
 
-For video production guidance see VIDEO-USAGE-GUIDE.md (kept separate).
+For video production guidance see `internal/VIDEO-USAGE-GUIDE.md` (kept out of the repo and deploys).

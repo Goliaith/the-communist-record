@@ -28,8 +28,6 @@ h1, h2, h3, h4 {
   letter-spacing: -0.04em;
 }
 
-h1 { font-size: clamp(2.25rem, 6vw, 3.5rem); }
-
 h1 { font-size: clamp(2rem, 5vw, 3rem); }
 h2 { font-size: clamp(1.5rem, 4vw, 2rem); margin-top: 2rem; }
 h3 { font-size: 1.25rem; margin-top: 1.5rem; }
@@ -231,6 +229,14 @@ tr:hover td {
   padding: 2.5rem 1.25rem;
 }
 
+/* Side cushion: keep tiles and cards away from the viewport edge.
+   Targets each page's single main content wrapper (body-level .mx-auto div);
+   the nav bar and footer manage their own padding. */
+body > div.mx-auto {
+  padding-left: clamp(1.25rem, 5vw, 4rem);
+  padding-right: clamp(1.25rem, 5vw, 4rem);
+}
+
 /* Buttons */
 .btn {
   display: inline-block;
@@ -273,21 +279,68 @@ tr:hover td {
   margin: 2rem 0;
 }
 
+/* Responsive nav: desktop links vs. mobile hamburger */
+.nav-brand { color: #f1f5f9; }
+.nav-brand:hover { text-decoration: none; }
+
+.nav-desktop { display: none; }
+
+.nav-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  color: #e2e8f0;
+  font-size: 1.35rem;
+  line-height: 1;
+}
+.nav-toggle:hover { background-color: #334155; }
+
+.nav-mobile {
+  display: none;
+  border-top: 1px solid #334155;
+  padding: 0.5rem 1rem 1rem;
+}
+.nav-mobile.open { display: block; }
+.nav-mobile a {
+  display: block;
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.5rem;
+  color: #e2e8f0;
+  font-weight: 500;
+}
+.nav-mobile a:hover { background-color: #334155; text-decoration: none; }
+.nav-mobile-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #64748b;
+  margin: 0.75rem 0 0.25rem 0.75rem;
+}
+.nav-mobile button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.5rem;
+  color: #cbd5e1;
+}
+.nav-mobile button:hover { background-color: #334155; }
+
+@media (min-width: 769px) {
+  .nav-desktop { display: flex; }
+  .nav-toggle { display: none; }
+  .nav-mobile { display: none !important; }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .section { padding: 1.5rem 1rem; }
   h1 { font-size: 2rem; }
   .hero-stat { font-size: 2.75rem; }
   .card { padding: 1.25rem; }
-  nav .flex.items-center.gap-x-2 { flex-wrap: wrap; gap: 0.25rem; font-size: 0.8rem; }
-  nav input[placeholder*="Search"] { width: 90px; }
-  .nav .group .absolute {
-    position: static;
-    box-shadow: none;
-    border: none;
-    width: 100%;
-    margin-top: 0;
-  }
 }
 
 /* Print friendly */
@@ -401,11 +454,6 @@ button {
 
 .stat-card, .card {
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 15px 20px -5px rgb(0 0 0 / 0.1);
 }
 
 .count-up {
