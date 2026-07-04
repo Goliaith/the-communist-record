@@ -37,72 +37,7 @@
       <strong class="text-red-400">Important Disclaimer:</strong> These groups generally do not publish detailed audited financials. Most are small and rely on member dues with limited public disclosure. Information below is compiled from organizational websites, IRS 990 filings of affiliated 501(c)(3) nonprofits, congressional oversight letters (House Ways &amp; Means, Senate Judiciary), tax records via donor-advised funds, and investigative reporting (NYT, NY Post, Free Press, InfluenceWatch, 2023–2026). Figures are documented transfers or reported ranges. Many political activities occur through coalitions and fiscally sponsored entities.
     </div>
 
-    <!-- Money Flow Chart -->
-    <div class="mb-10">
-      <h2 class="text-xl font-semibold tracking-tight mb-3">Money Flow Chart</h2>
-      <img src="images/money-flow-chart.jpg" alt="Money flow diagram showing how funding reaches major U.S. communist groups, with emphasis on the Singham network flowing to PSL-affiliated organizations" class="w-full max-w-5xl mx-auto rounded-xl border border-slate-700 shadow-lg">
-      <p class="text-center text-xs text-slate-400 mt-2">Simplified Sankey-style view of funding flows (2017–2026). Thick red arrows indicate higher-volume external funding. Most organizations rely primarily on member dues; the PSL ecosystem has received major support via the Singham network (primarily routed through The People’s Forum and related entities).</p>
 
-      <!-- Quick interactive legend -->
-      <div class="mt-4 text-center">
-        <div class="flex flex-wrap justify-center gap-2">
-          <button onclick="showFlowDetail(0)" class="text-xs px-3 py-1 rounded bg-slate-800 hover:bg-slate-700">Dues → Traditional Groups</button>
-          <button onclick="showFlowDetail(1)" class="text-xs px-3 py-1 rounded bg-red-900 hover:bg-red-800">Singham → People's Forum</button>
-          <button onclick="showFlowDetail(2)" class="text-xs px-3 py-1 rounded bg-slate-800 hover:bg-slate-700">People's Forum → PSL Ecosystem</button>
-        </div>
-        <div id="flow-detail" class="mt-3 text-sm text-slate-300 max-w-md mx-auto"></div>
-      </div>
-
-      <!-- Interactive HTML Money Flow Chart -->
-      <div class="mt-6">
-        <h3 class="text-lg font-semibold mb-3 text-center">Interactive Flow Explorer</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-          <!-- Sources -->
-          <div>
-            <div class="font-semibold mb-2 text-red-400">Sources</div>
-            <div onclick="highlightFlow(this, 'dues')" class="flow-box cursor-pointer mb-2 p-3 bg-slate-800 border border-slate-700 rounded hover:border-emerald-500" data-flow="dues">
-              <div class="font-medium">Member Dues &amp; Small Donations</div>
-              <div class="text-xs text-slate-400">Primary for CPUSA, WWP, FRSO, RCA, APL, PCUSA. Low volume, grassroots.</div>
-            </div>
-            <div onclick="highlightFlow(this, 'singham')" class="flow-box cursor-pointer p-3 bg-slate-800 border border-red-900 rounded hover:border-red-500" data-flow="singham">
-              <div class="font-medium">Neville Roy Singham Network</div>
-              <div class="text-xs text-slate-400">~ $278M total (2017-2026). Routed via donor-advised funds &amp; nonprofits.</div>
-            </div>
-          </div>
-
-          <!-- Flows / Intermediaries -->
-          <div>
-            <div class="font-semibold mb-2 text-red-400">Key Intermediary</div>
-            <div onclick="highlightFlow(this, 'forum')" class="flow-box cursor-pointer p-3 bg-red-950 border border-red-700 rounded" data-flow="forum">
-              <div class="font-medium">The People's Forum</div>
-              <div class="text-xs">~$20-22M from Singham network. Hub for PSL leadership, events, and organizing infrastructure.</div>
-              <div class="mt-2 text-[10px] text-red-300">Major pass-through entity</div>
-            </div>
-            <div class="mt-2 text-xs text-center text-slate-400">↓ flows to aligned groups</div>
-          </div>
-
-          <!-- Recipients -->
-          <div>
-            <div class="font-semibold mb-2 text-red-400">Major Recipients &amp; Beneficiaries</div>
-            <div class="space-y-2">
-              <div onclick="highlightFlow(this, 'psl')" class="flow-box cursor-pointer p-3 bg-slate-800 border border-slate-700 rounded text-sm hover:border-red-500" data-flow="psl">
-                <strong>PSL (Party for Socialism and Liberation)</strong><br>
-                <span class="text-xs">Heavy infrastructure support + direct organizing capacity from the network.</span>
-              </div>
-              <div onclick="highlightFlow(this, 'answer')" class="flow-box cursor-pointer p-3 bg-slate-800 border border-slate-700 rounded text-sm hover:border-red-500" data-flow="answer">
-                <strong>ANSWER Coalition</strong><br>
-                <span class="text-xs">Major protest organizing vehicle, benefits from Singham-aligned funding.</span>
-              </div>
-              <div onclick="highlightFlow(this, 'codepink')" class="flow-box cursor-pointer p-3 bg-slate-800 border border-slate-700 rounded text-sm hover:border-red-500" data-flow="codepink">
-                <strong>Code Pink</strong><br>
-                <span class="text-xs">~ $1.4M from Singham-linked sources; significant operational overlap.</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="flow-explain" class="mt-4 p-3 bg-slate-900 rounded text-sm text-slate-300 border border-slate-700"></div>
-      </div>
-    </div>
 
     <!-- Funding Infographic -->
     <div class="mb-8">

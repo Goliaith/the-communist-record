@@ -385,18 +385,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => { if (toast.parentNode) toast.parentNode.removeChild(toast); }, 6000);
   };
 
-  // Funding flow detail helper (used on funding page)
-  window.showFlowDetail = function(type) {
-    const el = document.getElementById('flow-detail');
-    if (!el) return;
 
-    const details = [
-      "Most groups (CPUSA, WWP, FRSO, etc.) are sustained almost entirely by small monthly dues from members. This is the traditional, low-volume model.",
-      "Neville Roy Singham’s network (via donor-advised funds and nonprofits) sent roughly $278 million into the ecosystem. The People’s Forum alone received ~$20–22M.",
-      "Money from the Singham-backed People’s Forum flows into PSL organizing, the ANSWER Coalition, Code Pink actions, and related media. This creates infrastructure far beyond what dues alone can support."
-    ];
-    el.innerHTML = details[type] || '';
-  };
 
   // Timeline era filter (used on timeline.html)
   window.filterTimeline = function(era) {
@@ -481,7 +470,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { title: "Why It Fails", url: "why-it-fails.html", keywords: "calculation incentives stagnation comparison" },
       { title: "Modern Risks", url: "modern-risks.html", keywords: "dsa cultural marxism institutions" },
       { title: "Current Groups", url: "current-groups.html", keywords: "psl cpusa wwp frso funding singham" },
-      { title: "Funding", url: "funding.html", keywords: "singham network money flow dues psl" },
+      { title: "Funding", url: "funding.html", keywords: "singham network dues psl" },
       { title: "Timeline", url: "timeline.html", keywords: "history soviet china 1917 1939 1945" },
       { title: "Regimes", url: "regimes.html", keywords: "ussr china cuba venezuela" },
       { title: "Origins", url: "origins.html", keywords: "marx manifesto lenin gramsci" }
@@ -545,25 +534,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Interactive HTML flow highlighter for funding page
-  window.highlightFlow = function(el, flowType) {
-    // Remove previous highlights
-    document.querySelectorAll('.flow-box').forEach(box => box.classList.remove('ring-2', 'ring-red-500', 'bg-red-900/30'));
-
-    el.classList.add('ring-2', 'ring-red-500', 'bg-red-900/30');
-
-    const explain = document.getElementById('flow-explain');
-    if (!explain) return;
-
-    const explanations = {
-      'dues': 'Traditional model: Small recurring contributions from individual members fund basic operations for most communist organizations. Very limited scale.',
-      'singham': 'External capital injection: ~$278M funneled through U.S. nonprofits (often using donor-advised funds). Dramatically increases capacity for specific aligned groups.',
-      'forum': 'Pass-through hub: The People’s Forum receives the largest documented Singham transfers and serves as organizational and event infrastructure closely tied to PSL.',
-      'psl': 'Primary beneficiary: PSL gains professional organizing staff, physical spaces (Liberation Centers), media, and protest coordination capacity far beyond member dues.',
-      'answer': 'Protest infrastructure: ANSWER Coalition (closely linked to WWP/PSL circles) uses network funding for large-scale demonstrations and international solidarity work.',
-      'codepink': 'Overlapping activism: Code Pink receives significant Singham-linked funding and frequently co-organizes with PSL/ANSWER actions.'
-    };
-
-    explain.innerHTML = `<strong>Selected flow:</strong> ${explanations[flowType] || 'Select a box to explore the flow.'}`;
-  };
 });

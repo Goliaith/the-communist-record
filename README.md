@@ -30,10 +30,10 @@ A separate video usage guide lives in `internal/` (not committed or deployed) wi
 The site received a modern audience attention-focused refresh:
 - Cinematic homepage hero with stronger hooks
 - "In 30 Seconds" stark facts with animated counters + share
-- Prominent placement of custom infographics (DSA org chart + money flow)
+- Prominent placement of custom infographics (DSA org chart)
 - Key Takeaways cards on modern pages + "Today's Parallels"
 - Scroll reveals, count-up animations, improved micro-interactions
-- Global search in nav + interactive HTML flow explorer on funding
+- Global search in nav + interactive elements on funding
 - Timeline era filters
 - Modern Lens / Compare to Today callouts across pages
 - Random stark fact button + quote shares
