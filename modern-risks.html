@@ -21,16 +21,41 @@
             <span class="font-semibold text-xl tracking-tight">The Communist Record</span>
           </div>
         </div>
-        <div class="flex items-center gap-x-1 text-sm">
+        <div class="flex items-center gap-x-2 text-sm">
           <a href="index.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Home</a>
-          <a href="origins.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Origins</a>
-          <a href="timeline.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">History</a>
-          <a href="regimes.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Regimes</a>
-          <a href="human-cost.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Human Cost</a>
-          <a href="why-it-fails.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Why It Fails</a>
-          <a href="modern-risks.html" class="nav-active px-3 py-1.5 rounded">Modern Risks</a>
-          <a href="current-groups.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Current Groups</a>
+
+          <!-- Historical Record Dropdown -->
+          <div class="relative group">
+            <div class="px-3 py-1.5 hover:bg-slate-800 rounded cursor-pointer flex items-center gap-1 select-none">
+              Historical Record
+              <span class="text-xs opacity-70">▼</span>
+            </div>
+            <div class="absolute left-0 top-full hidden group-hover:block bg-slate-900 border border-slate-700 rounded-xl shadow-xl w-48 z-50 py-1">
+              <a href="origins.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Origins</a>
+              <a href="timeline.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Timeline</a>
+              <a href="regimes.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Regimes</a>
+              <a href="human-cost.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Human Cost</a>
+              <a href="why-it-fails.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Why It Fails</a>
+            </div>
+          </div>
+
+          <!-- Modern Context Dropdown -->
+          <div class="relative group">
+            <div class="px-3 py-1.5 hover:bg-slate-800 rounded cursor-pointer flex items-center gap-1 select-none">
+              Modern Context
+              <span class="text-xs opacity-70">▼</span>
+            </div>
+            <div class="absolute left-0 top-full hidden group-hover:block bg-slate-900 border border-slate-700 rounded-xl shadow-xl w-48 z-50 py-1">
+              <a href="modern-risks.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Modern Risks</a>
+              <a href="current-groups.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Current Groups</a>
+              <a href="funding.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Funding</a>
+            </div>
+          </div>
+
           <a href="sources.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Sources</a>
+
+          <!-- Quick global search (modern attention + utility) -->
+          <input type="text" placeholder="Search site..." class="ml-2 text-xs bg-slate-900 border border-slate-700 focus:border-red-800 px-3 py-1 rounded w-28 focus:w-40 transition-all outline-none" onkeydown="if (event.key === 'Enter' && this.value.trim()) window.location.href='sources.html#search-' + encodeURIComponent(this.value)">
         </div>
       </div>
     </div>
@@ -65,21 +90,41 @@
     </div>
 
     <!-- Intellectual Shift -->
+    <!-- Key Takeaways for quick attention -->
+    <div class="mb-8 grid md:grid-cols-3 gap-4">
+      <div class="card reveal">
+        <div class="text-red-400 text-xs tracking-widest">KEY TAKEAWAY</div>
+        <div class="mt-1 font-semibold">Cultural Marxism replaced economic revolution</div>
+        <div class="text-sm text-slate-400 mt-1">When seizing the means of production failed in the West, the strategy shifted to capturing culture, education, and institutions.</div>
+      </div>
+      <div class="card reveal">
+        <div class="text-red-400 text-xs tracking-widest">KEY TAKEAWAY</div>
+        <div class="mt-1 font-semibold">DSA is the largest vehicle in the US today</div>
+        <div class="text-sm text-slate-400 mt-1">With explicit Marxist-Leninist caucuses operating openly inside the "big tent."</div>
+      </div>
+      <div class="card reveal">
+        <div class="text-red-400 text-xs tracking-widest">KEY TAKEAWAY</div>
+        <div class="mt-1 font-semibold">The funding model is no longer just dues</div>
+        <div class="text-sm text-slate-400 mt-1">A single billionaire-linked network has poured tens of millions into the ecosystem around PSL and aligned groups.</div>
+      </div>
+    </div>
+
     <div class="mb-10">
       <div class="uppercase text-xs tracking-[2px] text-red-400 mb-3">THE EVOLUTION</div>
       <h2 class="text-2xl font-semibold tracking-tight mb-4">From Economic to Cultural Marxism</h2>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="reason-card">
+        <div class="reason-card reveal">
           <div class="reason-title">Cultural Turn</div>
           <p class="text-sm text-slate-300">When direct economic revolution failed in the West, Marxist thinkers shifted focus to culture. The Frankfurt School (Critical Theory) and Antonio Gramsci emphasized capturing cultural and educational institutions rather than seizing factories.</p>
           <div class="quote">
             “The old world is dying, and the new world struggles to be born: now is the time of monsters.”<br>
             <span class="text-xs">— Antonio Gramsci (attributed)</span>
+            <button onclick="window.shareFact('Gramsci: “The old world is dying, and the new world struggles to be born: now is the time of monsters.”')" class="block mt-1 text-xs text-red-400 hover:text-red-300">Share quote →</button>
           </div>
         </div>
 
-        <div class="reason-card">
+        <div class="reason-card reveal">
           <div class="reason-title">Gramsci’s Long March</div>
           <p class="text-sm text-slate-300">Revolutionaries must conduct a “war of position” — infiltrating and transforming the institutions of civil society (schools, universities, churches, media) before seizing state power. This became the dominant strategy after economic Marxism stalled.</p>
           <div class="quote">
@@ -157,22 +202,22 @@
 
       <!-- DSA Cards -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-        <div class="reason-card">
+        <div class="reason-card reveal">
           <div class="reason-title">Anti-Capitalist Core</div>
           <p class="text-sm">DSA's analysis mirrors classical critiques: “Capitalism is a system designed by the owning class to exploit the rest of us... We must replace it with democratic socialism.” This echoes Marx and Engels' call for abolition of private property in the means of production.</p>
         </div>
 
-        <div class="reason-card">
+        <div class="reason-card reveal">
           <div class="reason-title">Communist Factions</div>
           <p class="text-sm">DSA operates as a “big tent” including explicit Marxist-Leninist groups:</p>
           <ul class="text-xs mt-2 space-y-1 text-slate-300">
-            <li><strong>Red Star Caucus:</strong> “Our primary goal... is to abolish capitalism and, ultimately, to achieve communism.”</li>
-            <li><strong>DSA Communist Caucus:</strong> “We want a stateless and classless society.”</li>
+            <li><strong>Red Star Caucus:</strong> “Our primary goal... is to abolish capitalism and, ultimately, to achieve communism.” <a href="https://redstarcaucus.org/points-of-unity/" target="_blank" class="text-blue-400 hover:underline">[source]</a></li>
+            <li><strong>DSA Communist Caucus:</strong> “We want a stateless and classless society.” <a href="https://communistcaucus.com/" target="_blank" class="text-blue-400 hover:underline">[source]</a></li>
           </ul>
           <p class="text-xs mt-2 text-slate-400">Other factions advocate overthrowing the U.S. constitutional order.</p>
         </div>
 
-        <div class="reason-card">
+        <div class="reason-card reveal">
           <div class="reason-title">Strategic Parallels</div>
           <ul class="text-sm space-y-1 mt-1">
             <li>Long march through institutions (unions, education, Democratic Party)</li>
@@ -186,7 +231,7 @@
       <!-- How DSA Operates graphic -->
       <div class="mb-6">
         <img src="images/how-dsa-operates.jpg" alt="How DSA Operates - Organizational structure and strategy infographic" class="w-full max-w-4xl mx-auto rounded-xl border border-slate-700 shadow-lg">
-        <p class="text-center text-xs text-slate-400 mt-2">How DSA Operates: structure, factions, and strategy of influence.</p>
+        <p class="text-center text-xs text-slate-400 mt-2">How DSA Operates: structure, factions, and strategy of influence. Based on public DSA platform and caucus materials (see Sources page).</p>
       </div>
 
       <!-- DSA vs Communism: Quote & Policy Comparison Table -->

@@ -21,16 +21,41 @@
             <span class="font-semibold text-xl tracking-tight">The Communist Record</span>
           </div>
         </div>
-        <div class="flex items-center gap-x-1 text-sm">
+        <div class="flex items-center gap-x-2 text-sm">
           <a href="index.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Home</a>
-          <a href="origins.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Origins</a>
-          <a href="timeline.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">History</a>
-          <a href="regimes.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Regimes</a>
-          <a href="human-cost.html" class="nav-active px-3 py-1.5 rounded">Human Cost</a>
-          <a href="why-it-fails.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Why It Fails</a>
-          <a href="modern-risks.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Modern Risks</a>
-          <a href="current-groups.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Current Groups</a>
+
+          <!-- Historical Record Dropdown -->
+          <div class="relative group">
+            <div class="px-3 py-1.5 hover:bg-slate-800 rounded cursor-pointer flex items-center gap-1 select-none">
+              Historical Record
+              <span class="text-xs opacity-70">▼</span>
+            </div>
+            <div class="absolute left-0 top-full hidden group-hover:block bg-slate-900 border border-slate-700 rounded-xl shadow-xl w-48 z-50 py-1">
+              <a href="origins.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Origins</a>
+              <a href="timeline.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Timeline</a>
+              <a href="regimes.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Regimes</a>
+              <a href="human-cost.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Human Cost</a>
+              <a href="why-it-fails.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Why It Fails</a>
+            </div>
+          </div>
+
+          <!-- Modern Context Dropdown -->
+          <div class="relative group">
+            <div class="px-3 py-1.5 hover:bg-slate-800 rounded cursor-pointer flex items-center gap-1 select-none">
+              Modern Context
+              <span class="text-xs opacity-70">▼</span>
+            </div>
+            <div class="absolute left-0 top-full hidden group-hover:block bg-slate-900 border border-slate-700 rounded-xl shadow-xl w-48 z-50 py-1">
+              <a href="modern-risks.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Modern Risks</a>
+              <a href="current-groups.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Current Groups</a>
+              <a href="funding.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Funding</a>
+            </div>
+          </div>
+
           <a href="sources.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Sources</a>
+
+          <!-- Quick global search (modern attention + utility) -->
+          <input type="text" placeholder="Search site..." class="ml-2 text-xs bg-slate-900 border border-slate-700 focus:border-red-800 px-3 py-1 rounded w-28 focus:w-40 transition-all outline-none" onkeydown="if (event.key === 'Enter' && this.value.trim()) window.location.href='sources.html#search-' + encodeURIComponent(this.value)">
         </div>
       </div>
     </div>
@@ -66,6 +91,20 @@
         </div>
         <div class="mt-auto pt-6 text-xs text-slate-500">More than the combined civilian and combat deaths of World War I and World War II in many estimates.</div>
       </div>
+
+      <!-- Compare to Today -->
+      <div class="lg:col-span-2 card p-6">
+        <div class="uppercase text-xs tracking-widest text-red-400 mb-2">COMPARING TO TODAY</div>
+        <div class="font-semibold mb-3">Modern echoes of the same logic</div>
+        <ul class="text-sm space-y-2 text-slate-300">
+          <li>• Mass death no longer required — institutional capture and cultural pressure achieve similar power consolidation.</li>
+          <li>• Engineered scarcity and control over speech/information still used as tools of social engineering.</li>
+          <li>• "For the greater good" justifications continue in climate, equity, and public health policies.</li>
+          <li>• The same class/identity framing reappears in contemporary activist language.</li>
+        </ul>
+        <div class="mt-4 text-[10px] text-slate-400">These are structural and rhetorical continuities — not claims of identical body counts.</div>
+      </div>
+    </div>
       <div class="lg:col-span-2">
         <div class="img-container h-full overflow-hidden rounded-2xl border border-slate-700" style="min-height: 260px;">
           <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Holodomor_Genocide_Memorial_Kyiv.JPG" alt="Holodomor Genocide Memorial, Kyiv" class="w-full h-full object-cover">
@@ -74,23 +113,31 @@
       </div>
     </div>
 
+    <!-- Quick TOC for modern scannable experience -->
+    <div class="mb-4 flex flex-wrap gap-2 text-xs">
+      <a href="#china" class="px-2 py-1 bg-slate-800 rounded hover:bg-red-900">China</a>
+      <a href="#ussr" class="px-2 py-1 bg-slate-800 rounded hover:bg-red-900">USSR</a>
+      <a href="#cambodia" class="px-2 py-1 bg-slate-800 rounded hover:bg-red-900">Cambodia</a>
+      <a href="#gulag" class="px-2 py-1 bg-slate-800 rounded hover:bg-red-900">Gulag &amp; Others</a>
+    </div>
+
     <!-- At-a-Glance Key Stats -->
-    <div class="mb-12">
+    <div class="mb-12 reveal">
       <div class="uppercase text-xs tracking-[2px] text-red-400 mb-3">THE SCALE IN NUMBERS</div>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-        <div class="stat-card card">
+        <div id="china" class="stat-card card">
           <div class="text-4xl font-bold text-red-500">65M+</div>
           <div class="text-xs text-slate-400 mt-1">China (Great Leap Forward + other campaigns)</div>
         </div>
-        <div class="stat-card card">
+        <div id="ussr" class="stat-card card">
           <div class="text-4xl font-bold text-red-500">20M+</div>
           <div class="text-xs text-slate-400 mt-1">Soviet Union (Holodomor, Purges, Gulag, deportations)</div>
         </div>
-        <div class="stat-card card">
+        <div id="cambodia" class="stat-card card">
           <div class="text-4xl font-bold text-red-500">~25%</div>
           <div class="text-xs text-slate-400 mt-1">Cambodia’s population wiped out in under 4 years (Khmer Rouge)</div>
         </div>
-        <div class="stat-card card">
+        <div id="gulag" class="stat-card card">
           <div class="text-4xl font-bold text-red-500">18M+</div>
           <div class="text-xs text-slate-400 mt-1">Passed through Soviet Gulag; millions died</div>
         </div>
@@ -137,7 +184,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
         <!-- Great Leap Forward -->
-        <div class="impact-card">
+        <div class="impact-card reveal">
           <div class="card-media">
             <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Chairman_Mao.jpg" alt="Mao Zedong">
             <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 p-3 text-sm font-medium">China • 1958–1962</div>
@@ -154,7 +201,7 @@
         </div>
 
         <!-- Holodomor -->
-        <div class="impact-card">
+        <div class="impact-card reveal">
           <div class="card-media">
             <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Holodomor_Genocide_Memorial_Kyiv.JPG" alt="Holodomor Memorial">
             <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 p-3 text-sm font-medium">Ukraine • 1932–1933</div>
@@ -165,13 +212,13 @@
             </div>
             <div class="font-semibold text-lg mt-0.5">The Holodomor</div>
             <p class="text-sm mt-2 text-slate-300">Stalin deliberately engineered famine in Ukraine by confiscating grain, blacklisting villages, and sealing borders to prevent escape. Recognized as genocide by numerous governments and scholars. Part of broader Soviet collectivization terror that also devastated Kazakhstan and other regions.</p>
-            <div class="mt-3 text-xs border-l-2 border-red-900 pl-2 text-slate-400">“They took everything... Even the seed grain. People were eating grass, bark, and in some cases, the dead.” — Survivor accounts</div>
+            <div class="mt-3 text-xs border-l-2 border-red-900 pl-2 text-slate-400">“They took everything... Even the seed grain. People were eating grass, bark, and in some cases, the dead.” — Survivor accounts <button onclick="window.shareFact('Holodomor survivor: “They took everything... Even the seed grain. People were eating grass, bark, and in some cases, the dead.”')" class="ml-1 text-red-400 hover:text-red-300">share</button></div>
             <div class="meta mt-3">Robert Conquest, <em>The Harvest of Sorrow</em>; Black Book of Communism</div>
           </div>
         </div>
 
         <!-- Khmer Rouge -->
-        <div class="impact-card">
+        <div class="impact-card reveal">
           <div class="card-media">
             <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Choeung_Ek_the_Killing_Fields_%2811958346254%29.jpg" alt="Choeung Ek Killing Fields memorial">
             <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 p-3 text-sm font-medium">Cambodia • 1975–1979</div>
@@ -188,7 +235,7 @@
         </div>
 
         <!-- Great Purge + Gulag -->
-        <div class="impact-card">
+        <div class="impact-card reveal">
           <div class="card-media">
             <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/West_and_East_Germans_at_the_Brandenburg_Gate_in_1989.jpg" alt="Symbol of division and repression">
             <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 p-3 text-sm font-medium">Soviet Union • 1930s–1950s</div>

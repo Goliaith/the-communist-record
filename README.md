@@ -26,6 +26,27 @@ Dark, serious, highly readable theme. Tailwind via CDN. Fully static.
 ## After Completion
 A separate VIDEO-USAGE-GUIDE.md will be provided with instructions on using the site for video production. This guide is intentionally kept out of the public website.
 
+## Recent Redesign (2026)
+The site received a modern audience attention-focused refresh:
+- Cinematic homepage hero with stronger hooks
+- "In 30 Seconds" stark facts with animated counters + share
+- Prominent placement of custom infographics (DSA org chart + money flow)
+- Key Takeaways cards on modern pages + "Today's Parallels"
+- Scroll reveals, count-up animations, improved micro-interactions
+- Global search in nav + interactive HTML flow explorer on funding
+- Timeline era filters
+- Modern Lens / Compare to Today callouts across pages
+- Random stark fact button + quote shares
+- Refined typography, spacing, and mobile-friendly nav
+- Global search modal with smart suggestions
+- Scrolly reveals, TOCs on long pages, era filters on timeline
+- More "Modern Lens" callouts and interactive elements
+- Floating back-to-top, random fact generator, enhanced quote sharing
+- Visual Journey filters by historical/modern
+- **New: Dismissible "What's New" banner** on homepage (remembers via localStorage)
+
+See REDESIGN-PROPOSAL.md for the full analysis and vision.
+
 ## Disclaimer
 For educational purposes only. All content is attributed to historical sources. See the Sources page.
 

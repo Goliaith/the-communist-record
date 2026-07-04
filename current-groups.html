@@ -21,16 +21,41 @@
             <span class="font-semibold text-xl tracking-tight">The Communist Record</span>
           </div>
         </div>
-        <div class="flex items-center gap-x-1 text-sm">
+        <div class="flex items-center gap-x-2 text-sm">
           <a href="index.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Home</a>
-          <a href="origins.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Origins</a>
-          <a href="timeline.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">History</a>
-          <a href="regimes.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Regimes</a>
-          <a href="human-cost.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Human Cost</a>
-          <a href="why-it-fails.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Why It Fails</a>
-          <a href="modern-risks.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Modern Risks</a>
-          <a href="current-groups.html" class="nav-active px-3 py-1.5 rounded">Current Groups</a>
+
+          <!-- Historical Record Dropdown -->
+          <div class="relative group">
+            <div class="px-3 py-1.5 hover:bg-slate-800 rounded cursor-pointer flex items-center gap-1 select-none">
+              Historical Record
+              <span class="text-xs opacity-70">▼</span>
+            </div>
+            <div class="absolute left-0 top-full hidden group-hover:block bg-slate-900 border border-slate-700 rounded-xl shadow-xl w-48 z-50 py-1">
+              <a href="origins.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Origins</a>
+              <a href="timeline.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Timeline</a>
+              <a href="regimes.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Regimes</a>
+              <a href="human-cost.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Human Cost</a>
+              <a href="why-it-fails.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Why It Fails</a>
+            </div>
+          </div>
+
+          <!-- Modern Context Dropdown -->
+          <div class="relative group">
+            <div class="px-3 py-1.5 hover:bg-slate-800 rounded cursor-pointer flex items-center gap-1 select-none">
+              Modern Context
+              <span class="text-xs opacity-70">▼</span>
+            </div>
+            <div class="absolute left-0 top-full hidden group-hover:block bg-slate-900 border border-slate-700 rounded-xl shadow-xl w-48 z-50 py-1">
+              <a href="modern-risks.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Modern Risks</a>
+              <a href="current-groups.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Current Groups</a>
+              <a href="funding.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Funding</a>
+            </div>
+          </div>
+
           <a href="sources.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Sources</a>
+
+          <!-- Quick global search (modern attention + utility) -->
+          <input type="text" placeholder="Search site..." class="ml-2 text-xs bg-slate-900 border border-slate-700 focus:border-red-800 px-3 py-1 rounded w-28 focus:w-40 transition-all outline-none" onkeydown="if (event.key === 'Enter' && this.value.trim()) window.location.href='sources.html#search-' + encodeURIComponent(this.value)">
         </div>
       </div>
     </div>
@@ -103,8 +128,8 @@
         <div class="reason-card">
           <div class="reason-title">Internal Communist Factions</div>
           <ul class="text-sm space-y-2 mt-1">
-            <li><strong>Red Star Caucus (Marxist-Leninist):</strong> “Our primary goal… is to abolish capitalism and, ultimately, to achieve communism. We do not believe that capitalism can be reformed into socialism – it must be overthrown.”</li>
-            <li><strong>DSA Communist Caucus:</strong> “Communism is the movement against class society. We want a stateless and classless society.”</li>
+            <li><strong>Red Star Caucus (Marxist-Leninist):</strong> “Our primary goal… is to abolish capitalism and, ultimately, to achieve communism. We do not believe that capitalism can be reformed into socialism – it must be overthrown.” <a href="https://redstarcaucus.org/points-of-unity/" target="_blank" class="text-blue-400 hover:underline">[source]</a></li>
+            <li><strong>DSA Communist Caucus:</strong> “Communism is the movement against class society. We want a stateless and classless society.” <a href="https://communistcaucus.com/" target="_blank" class="text-blue-400 hover:underline">[source]</a></li>
           </ul>
         </div>
 
@@ -115,9 +140,23 @@
       </div>
 
       <!-- How DSA Operates graphic -->
+      <!-- Key Takeaways -->
+      <div class="mb-6 grid md:grid-cols-2 gap-4">
+        <div class="card reveal">
+          <div class="text-red-400 text-xs">KEY INSIGHT</div>
+          <div class="font-semibold mt-1">DSA is the largest "big tent" vehicle</div>
+          <div class="text-sm text-slate-400">It contains explicit communist caucuses that openly advocate overthrowing capitalism.</div>
+        </div>
+        <div class="card reveal">
+          <div class="text-red-400 text-xs">KEY INSIGHT</div>
+          <div class="font-semibold mt-1">The money and infrastructure are not grassroots only</div>
+          <div class="text-sm text-slate-400">Significant external funding and professional organizing capacity now back aligned groups.</div>
+        </div>
+      </div>
+
       <div class="mb-6">
         <img src="images/how-dsa-operates.jpg" alt="How DSA Operates - Organizational structure and strategy infographic" class="w-full max-w-4xl mx-auto rounded-xl border border-slate-700 shadow-lg">
-        <p class="text-center text-xs text-slate-400 mt-2">How DSA Operates: structure, factions, and strategy of influence.</p>
+        <p class="text-center text-xs text-slate-400 mt-2">How DSA Operates: structure, factions, and strategy of influence. Based on public DSA platform and caucus materials (see Sources page).</p>
       </div>
 
       <div class="callout">
@@ -161,12 +200,18 @@
 
       <p class="text-xs text-slate-400 mt-2">These statements often frame issues through lenses of class struggle, decolonization, and systemic overthrow that mirror elements of historical communist rhetoric (e.g., viewing institutions as tools of oppression, capitalism as irredeemable, reforms as steps toward larger transformation). DSA has at times conditioned or withdrawn support from candidates seen as insufficiently aligned. See also the comparison table in the <a href="modern-risks.html">Modern Risks</a> section.</p>
 
+      <div class="mt-4">
+        <a href="funding.html" class="inline-flex items-center gap-x-2 px-4 py-2 bg-red-900 hover:bg-red-800 text-sm rounded-lg font-medium">
+          View detailed funding sources and social media for these groups →
+        </a>
+      </div>
+
       <h4 class="font-semibold mt-4">Additional Examples</h4>
       <div class="space-y-4 mt-2">
         <div class="card p-4">
           <div class="font-semibold">Alexandria Ocasio-Cortez (AOC, U.S. Rep., DSA member)</div>
           <ul class="text-sm mt-2 space-y-2">
-            <li>On capitalism: “Capitalism has not always existed in the world and will not always exist in the world.” “So to me capitalism is irredeemable.” <a href="https://www.quora.com/Why-would-you-agree-or-disagree-with-AOCs-statement-so-to-me-capitalism-is-irredeemable" target="_blank" class="text-blue-400 hover:underline">[Quora/attributed interviews]</a></li>
+            <li>On capitalism: “Capitalism has not always existed in the world and will not always exist in the world.” “So to me capitalism is irredeemable.” <a href="https://www.the-independent.com/news/world/americas/us-politics/aoc-capitalism-irredeemable-alexandria-ocasio-cortez-south-southwest-sxsw-a8816956.html" target="_blank" class="text-blue-400 hover:underline">[The Independent / SXSW 2019]</a></li>
             <li>On socialism: “To me, what socialism means is to guarantee a basic level of dignity.” DSA has had tensions with her over Israel/Palestine positions, at times conditioning or withdrawing national endorsement. <a href="https://www.cityandstateny.com/politics/2024/07/real-story-behind-dsas-decision-unendorse-aoc/398024/" target="_blank" class="text-blue-400 hover:underline">[City & State NY]</a></li>
           </ul>
           <div class="text-xs text-slate-400 mt-1">Sources: Interviews and DSA statements (2018-2024).</div>
@@ -208,17 +253,70 @@
       </div>
     </div>
 
-    <!-- Other US Groups -->
+    <!-- Other Communist Groups -->
     <div class="mb-10">
-      <h3 class="text-lg font-semibold mb-3">Other U.S. Organizations</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <h3 class="text-lg font-semibold mb-3">Other Communist and Marxist-Leninist Organizations</h3>
+      <p class="text-sm text-slate-300 mb-4">In addition to DSA and its internal factions, several openly communist organizations actively promote Marxist-Leninist analysis, organize protests, participate in labor and social movements, and advance anti-capitalist and anti-imperialist agendas. Many participate in coalitions that overlap with or assist broader left and DSA-influenced campaigns through shared rhetoric, protest organizing, and institutional work.</p>
+
+      <div class="space-y-6">
+        <!-- CPUSA -->
         <div class="card p-4">
-          <div class="font-semibold mb-1">Communist Party USA (CPUSA)</div>
-          <p class="text-sm">Openly Marxist-Leninist. Advocates “a socialist USA” through a combination of electoral work and mass movements. Maintains fraternal ties with communist parties abroad and continues to defend aspects of 20th-century communist history while criticizing “distortions.”</p>
+          <div class="font-semibold text-lg mb-1">Communist Party USA (CPUSA)</div>
+          <div class="text-xs text-red-400 mb-2">cpusa.org</div>
+          <p class="text-sm">The oldest communist organization in the US (founded 1919). Describes itself as Marxist-Leninist and advocates “Bill of Rights socialism.” Its 2025 program calls for replacing capitalism with socialism through “a strategy of struggle, unity, reform, and revolution.” Focuses on labor unions, racial justice, environmental activism, and opposing “corporate capitalism.”</p>
+          <ul class="text-sm mt-2 space-y-1 text-slate-300">
+            <li>Recent activity includes local electoral campaigns and alliances with broader progressive movements.</li>
+            <li>Program emphasizes unity against the “extreme right” and building an “anti-monopoly coalition.”</li>
+          </ul>
+          <div class="text-[10px] text-slate-400 mt-2">Sources: CPUSA Party Program (2025 edition, cpusa.org); Wikipedia summary of activities.</div>
         </div>
+
+        <!-- PSL -->
         <div class="card p-4">
-          <div class="font-semibold mb-1">Party for Socialism and Liberation (PSL) & Workers World Party (WWP)</div>
-          <p class="text-sm">Revolutionary Marxist-Leninist groups that explicitly support historical communist states (Cuba, China, DPRK, Venezuela) and call for the overthrow of capitalism. Active in protests and “anti-imperialist” coalitions.</p>
+          <div class="font-semibold text-lg mb-1">Party for Socialism and Liberation (PSL)</div>
+          <div class="text-xs text-red-400 mb-2">pslweb.org / liberationnews.org</div>
+          <p class="text-sm">Revolutionary Marxist-Leninist party founded in 2004. Explicitly aims to abolish capitalism and replace it with a socialist system. Runs presidential and local candidates and is heavily involved in street protests, especially around Palestine solidarity, police abolition, and anti-imperialism.</p>
+          <ul class="text-sm mt-2 space-y-1 text-slate-300">
+            <li>Organized and participated in major 2024-2026 protests; supported candidates including Claudia De la Cruz for President.</li>
+            <li>Program states: “The aim of the PSL is to abolish the corrupt, rotten and anti-people capitalist economy, state and governmental system...”</li>
+            <li>Active in coalitions with various left and “anti-war” groups.</li>
+          </ul>
+          <div class="text-[10px] text-slate-400 mt-2">Sources: PSL Program (pslweb.org); Liberation News; ADL backgrounder and contemporary reporting.</div>
+        </div>
+
+        <!-- WWP -->
+        <div class="card p-4">
+          <div class="font-semibold text-lg mb-1">Workers World Party (WWP)</div>
+          <div class="text-xs text-red-400 mb-2">workers.org</div>
+          <p class="text-sm">Founded 1959 (split from Socialist Workers Party). Marxist-Leninist (Marcyite tendency). Advocates socialist revolution and supports historical communist states. Focuses on “workers and oppressed peoples of the world unite.”</p>
+          <ul class="text-sm mt-2 space-y-1 text-slate-300">
+            <li>Long history of militant protest organizing and anti-imperialist work.</li>
+            <li>Publishes Workers World newspaper; active in labor, anti-war, and social justice campaigns.</li>
+          </ul>
+          <div class="text-[10px] text-slate-400 mt-2">Sources: workers.org; Wikipedia and historical program documents.</div>
+        </div>
+
+        <!-- FRSO -->
+        <div class="card p-4">
+          <div class="font-semibold text-lg mb-1">Freedom Road Socialist Organization (FRSO)</div>
+          <div class="text-xs text-red-400 mb-2">frso.org</div>
+          <p class="text-sm">Marxist-Leninist organization formed in 1985 (New Communist Movement roots). Describes itself as fighting for “Revolution. Socialism. Liberation.” Aims to “build a new, revolutionary, communist party” in the United States. Active in labor, community control of police, and national liberation movements.</p>
+          <ul class="text-sm mt-2 space-y-1 text-slate-300">
+            <li>Recent 10th Congress (2026) declared growth and leadership in “people’s movements” including George Floyd rebellion protests and anti-war actions.</li>
+            <li>Strong emphasis on building united fronts and strategic alliances.</li>
+          </ul>
+          <div class="text-[10px] text-slate-400 mt-2">Sources: FRSO statements and congress documents (frso.org); Fight Back! News.</div>
+        </div>
+
+        <!-- Additional groups -->
+        <div class="card p-4">
+          <div class="font-semibold text-lg mb-1">Other Notable Groups</div>
+          <ul class="text-sm space-y-2 text-slate-300">
+            <li><strong>Revolutionary Communists of America (RCA)</strong> — communistusa.org: Revolutionary organization explicitly preparing for “the coming American revolution” and the overthrow of capitalism. Part of an international network.</li>
+            <li><strong>American Party of Labor (APL)</strong> — americanpartyoflabor.com: Anti-revisionist (Hoxhaist) Marxist-Leninist party. Member of international ML organizations; focuses on building a vanguard party.</li>
+            <li><strong>Party of Communists USA (PCUSA)</strong>: Maintains a detailed program for transition from capitalism to socialism to communism; emphasizes work in unions and cultural institutions.</li>
+          </ul>
+          <div class="text-[10px] text-slate-400 mt-2">Sources: Organizational websites and programs (2025-2026).</div>
         </div>
       </div>
     </div>

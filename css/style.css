@@ -25,8 +25,10 @@ h1, h2, h3, h4 {
   font-weight: 700;
   line-height: 1.15;
   color: #f1f5f9;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.04em;
 }
+
+h1 { font-size: clamp(2.25rem, 6vw, 3.5rem); }
 
 h1 { font-size: clamp(2rem, 5vw, 3rem); }
 h2 { font-size: clamp(1.5rem, 4vw, 2rem); margin-top: 2rem; }
@@ -35,6 +37,11 @@ h3 { font-size: 1.25rem; margin-top: 1.5rem; }
 p {
   margin-bottom: 1rem;
   max-width: 72ch;
+  line-height: 1.75;
+}
+
+body {
+  font-feature-settings: "kern" "liga" "tnum";
 }
 
 a {
@@ -272,6 +279,15 @@ tr:hover td {
   h1 { font-size: 2rem; }
   .hero-stat { font-size: 2.75rem; }
   .card { padding: 1.25rem; }
+  nav .flex.items-center.gap-x-2 { flex-wrap: wrap; gap: 0.25rem; font-size: 0.8rem; }
+  nav input[placeholder*="Search"] { width: 90px; }
+  .nav .group .absolute {
+    position: static;
+    box-shadow: none;
+    border: none;
+    width: 100%;
+    margin-top: 0;
+  }
 }
 
 /* Print friendly */
@@ -357,6 +373,50 @@ tr:hover td {
   padding-left: 1rem;
   border-left: 2px solid #475569;
   margin-top: 0.25rem;
+}
+
+/* Modern attention: subtle reveals and polish */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.65s cubic-bezier(0.4, 0, 0.2, 1), transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Subtle modern polish */
+.card, .impact-card, .stat-card {
+  will-change: transform;
+}
+
+a {
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+button {
+  transition: all 0.15s ease;
+}
+
+.stat-card, .card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 20px -5px rgb(0 0 0 / 0.1);
+}
+
+.count-up {
+  font-variant-numeric: tabular-nums;
+}
+
+.flow-box {
+  transition: all 0.2s ease;
+}
+.flow-box.ring-2 {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.4);
 }
 
 /* Charts */

@@ -21,16 +21,41 @@
             <span class="font-semibold text-xl tracking-tight">The Communist Record</span>
           </div>
         </div>
-        <div class="flex items-center gap-x-1 text-sm">
+        <div class="flex items-center gap-x-2 text-sm">
           <a href="index.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Home</a>
-          <a href="origins.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Origins</a>
-          <a href="timeline.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">History</a>
-          <a href="regimes.html" class="nav-active px-3 py-1.5 rounded">Regimes</a>
-          <a href="human-cost.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Human Cost</a>
-          <a href="why-it-fails.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Why It Fails</a>
-          <a href="modern-risks.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Modern Risks</a>
-          <a href="current-groups.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Current Groups</a>
+
+          <!-- Historical Record Dropdown -->
+          <div class="relative group">
+            <div class="px-3 py-1.5 hover:bg-slate-800 rounded cursor-pointer flex items-center gap-1 select-none">
+              Historical Record
+              <span class="text-xs opacity-70">▼</span>
+            </div>
+            <div class="absolute left-0 top-full hidden group-hover:block bg-slate-900 border border-slate-700 rounded-xl shadow-xl w-48 z-50 py-1">
+              <a href="origins.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Origins</a>
+              <a href="timeline.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Timeline</a>
+              <a href="regimes.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Regimes</a>
+              <a href="human-cost.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Human Cost</a>
+              <a href="why-it-fails.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Why It Fails</a>
+            </div>
+          </div>
+
+          <!-- Modern Context Dropdown -->
+          <div class="relative group">
+            <div class="px-3 py-1.5 hover:bg-slate-800 rounded cursor-pointer flex items-center gap-1 select-none">
+              Modern Context
+              <span class="text-xs opacity-70">▼</span>
+            </div>
+            <div class="absolute left-0 top-full hidden group-hover:block bg-slate-900 border border-slate-700 rounded-xl shadow-xl w-48 z-50 py-1">
+              <a href="modern-risks.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Modern Risks</a>
+              <a href="current-groups.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Current Groups</a>
+              <a href="funding.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Funding</a>
+            </div>
+          </div>
+
           <a href="sources.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Sources</a>
+
+          <!-- Quick global search (modern attention + utility) -->
+          <input type="text" placeholder="Search site..." class="ml-2 text-xs bg-slate-900 border border-slate-700 focus:border-red-800 px-3 py-1 rounded w-28 focus:w-40 transition-all outline-none" onkeydown="if (event.key === 'Enter' && this.value.trim()) window.location.href='sources.html#search-' + encodeURIComponent(this.value)">
         </div>
       </div>
     </div>
@@ -53,8 +78,22 @@
       <p class="text-xs mt-2 text-slate-400">See also: <a href="why-it-fails.html" class="underline">Why It Fails</a> for the structural reasons, and <a href="human-cost.html" class="underline">Human Cost</a> for the death tolls.</p>
     </div>
 
+    <!-- Quick TOC for scannability -->
+    <div class="mb-4 flex flex-wrap gap-2 text-xs">
+      <a href="#ussr" class="px-2 py-1 bg-slate-800 rounded hover:bg-red-900">USSR</a>
+      <a href="#china" class="px-2 py-1 bg-slate-800 rounded hover:bg-red-900">China</a>
+      <a href="#cambodia" class="px-2 py-1 bg-slate-800 rounded hover:bg-red-900">Cambodia</a>
+      <a href="#nk" class="px-2 py-1 bg-slate-800 rounded hover:bg-red-900">North Korea &amp; Cuba</a>
+    </div>
+
+    <!-- Modern Lens -->
+    <div class="mb-6 p-4 bg-slate-900 border border-red-900/50 rounded-xl text-sm">
+      <span class="text-red-400 text-xs">MODERN LENS</span><br>
+      Elements of the same central-planning mindset persist in modern "green new deals," wealth taxes, and state-directed industry policies. The incentive problems and information failures don't disappear just because the rhetoric changes.
+    </div>
+
     <!-- Visual Header Images -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8 reveal">
       <div class="img-container">
         <img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Joseph_Stalin_official_portrait.jpg" alt="Joseph Stalin" style="max-height: 220px; width: auto;" loading="lazy">
         <div class="img-caption">Joseph Stalin, USSR</div>
@@ -75,9 +114,9 @@
 
     <div class="mt-8 space-y-4">
       <!-- USSR -->
-      <div class="regime-accordion">
+      <div class="regime-accordion reveal">
         <div class="accordion-header">
-          <h2 class="text-2xl">Soviet Union (1917–1991)</h2>
+          <h2 id="ussr" class="text-2xl">Soviet Union (1917–1991)</h2>
           <span class="arrow">▼</span>
         </div>
         <div class="accordion-content">
@@ -87,6 +126,7 @@
           <div class="callout text-sm">
             <strong>Lenin on the Red Terror (1918):</strong><br>
             “Let us put the speculators against the wall. ... We must make examples of these people, even if it means shooting a few dozen of them.”
+            <button onclick="window.shareFact('Lenin on Red Terror: “Let us put the speculators against the wall...”')" class="ml-1 text-xs text-red-400 hover:text-red-300">share</button>
           </div>
           <div class="callout text-sm">
             <strong>Stalin on terror and class enemies:</strong><br>
@@ -134,9 +174,9 @@
       </div>
 
       <!-- China -->
-      <div class="regime-accordion">
+      <div class="regime-accordion reveal">
         <div class="accordion-header">
-          <h2 class="text-2xl">China (1949–present)</h2>
+          <h2 id="china" class="text-2xl">China (1949–present)</h2>
           <span class="arrow">▼</span>
         </div>
         <div class="accordion-content">
@@ -191,9 +231,9 @@
       </div>
 
       <!-- Cambodia -->
-      <div class="regime-accordion">
+      <div class="regime-accordion reveal">
         <div class="accordion-header">
-          <h2 class="text-2xl">Cambodia — Khmer Rouge (1975–1979)</h2>
+          <h2 id="cambodia" class="text-2xl">Cambodia — Khmer Rouge (1975–1979)</h2>
           <span class="arrow">▼</span>
         </div>
         <div class="accordion-content">
@@ -243,7 +283,7 @@
       </div>
 
       <!-- Cuba -->
-      <div class="regime-accordion">
+      <div class="regime-accordion reveal">
         <div class="accordion-header">
           <h2 class="text-2xl">Cuba (1959–present)</h2>
           <span class="arrow">▼</span>
@@ -283,9 +323,9 @@
       </div>
 
       <!-- North Korea -->
-      <div class="regime-accordion">
+      <div class="regime-accordion reveal">
         <div class="accordion-header">
-          <h2 class="text-2xl">North Korea (1948–present)</h2>
+          <h2 id="nk" class="text-2xl">North Korea (1948–present)</h2>
           <span class="arrow">▼</span>
         </div>
         <div class="accordion-content">
@@ -315,7 +355,7 @@
       </div>
 
       <!-- Vietnam -->
-      <div class="regime-accordion">
+      <div class="regime-accordion reveal">
         <div class="accordion-header">
           <h2 class="text-2xl">Vietnam (North 1954–, Unified 1975–present)</h2>
           <span class="arrow">▼</span>
@@ -345,7 +385,7 @@
       </div>
 
       <!-- Eastern Europe -->
-      <div class="regime-accordion">
+      <div class="regime-accordion reveal">
         <div class="accordion-header">
           <h2 class="text-2xl">Eastern Europe (1945–1989/91)</h2>
           <span class="arrow">▼</span>
@@ -377,7 +417,7 @@
       </div>
 
       <!-- Venezuela -->
-      <div class="regime-accordion">
+      <div class="regime-accordion reveal">
         <div class="accordion-header">
           <h2 class="text-2xl">Venezuela (1999–present, "21st Century Socialism")</h2>
           <span class="arrow">▼</span>
@@ -407,7 +447,7 @@
         </div>
       </div>
 
-      <div class="regime-accordion">
+      <div class="regime-accordion reveal">
         <div class="accordion-header">
           <span class="font-semibold">Other Notable Cases and Influences</span>
           <span class="arrow">▼</span>

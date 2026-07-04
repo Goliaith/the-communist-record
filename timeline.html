@@ -20,16 +20,41 @@
             <span class="font-semibold text-xl tracking-tight">The Communist Record</span>
           </div>
         </div>
-        <div class="flex items-center gap-x-1 text-sm">
+        <div class="flex items-center gap-x-2 text-sm">
           <a href="index.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Home</a>
-          <a href="origins.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Origins</a>
-          <a href="timeline.html" class="nav-active px-3 py-1.5 rounded">History</a>
-          <a href="regimes.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Regimes</a>
-          <a href="human-cost.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Human Cost</a>
-          <a href="why-it-fails.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Why It Fails</a>
-          <a href="modern-risks.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Modern Risks</a>
-          <a href="current-groups.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Current Groups</a>
+
+          <!-- Historical Record Dropdown -->
+          <div class="relative group">
+            <div class="px-3 py-1.5 hover:bg-slate-800 rounded cursor-pointer flex items-center gap-1 select-none">
+              Historical Record
+              <span class="text-xs opacity-70">▼</span>
+            </div>
+            <div class="absolute left-0 top-full hidden group-hover:block bg-slate-900 border border-slate-700 rounded-xl shadow-xl w-48 z-50 py-1">
+              <a href="origins.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Origins</a>
+              <a href="timeline.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Timeline</a>
+              <a href="regimes.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Regimes</a>
+              <a href="human-cost.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Human Cost</a>
+              <a href="why-it-fails.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Why It Fails</a>
+            </div>
+          </div>
+
+          <!-- Modern Context Dropdown -->
+          <div class="relative group">
+            <div class="px-3 py-1.5 hover:bg-slate-800 rounded cursor-pointer flex items-center gap-1 select-none">
+              Modern Context
+              <span class="text-xs opacity-70">▼</span>
+            </div>
+            <div class="absolute left-0 top-full hidden group-hover:block bg-slate-900 border border-slate-700 rounded-xl shadow-xl w-48 z-50 py-1">
+              <a href="modern-risks.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Modern Risks</a>
+              <a href="current-groups.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Current Groups</a>
+              <a href="funding.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Funding</a>
+            </div>
+          </div>
+
           <a href="sources.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Sources</a>
+
+          <!-- Quick global search (modern attention + utility) -->
+          <input type="text" placeholder="Search site..." class="ml-2 text-xs bg-slate-900 border border-slate-700 focus:border-red-800 px-3 py-1 rounded w-28 focus:w-40 transition-all outline-none" onkeydown="if (event.key === 'Enter' && this.value.trim()) window.location.href='sources.html#search-' + encodeURIComponent(this.value)">
         </div>
       </div>
     </div>
@@ -39,9 +64,28 @@
     <h1 class="text-4xl font-bold tracking-tight mb-2">Historical Timeline</h1>
     <p class="text-xl text-slate-300">Key events in the history of communism from its seizure of power to the present.</p>
 
-    <div class="timeline mt-10">
+    <!-- Modern Lens -->
+    <div class="mb-4 p-3 bg-slate-900 border border-red-900/50 rounded text-sm">
+      <span class="text-red-400 text-xs">MODERN LENS</span> Many of these historical tactics — vanguard parties, institutional capture, class-based purges — have modern echoes in activist strategies and policy.
+    </div>
+
+    <!-- Interactive filter -->
+    <div class="mb-4 flex flex-wrap gap-2 items-center">
+      <span class="text-xs uppercase tracking-widest text-slate-400">Jump to era:</span>
+      <button onclick="filterTimeline('all')" class="text-xs px-3 py-1 bg-slate-800 hover:bg-red-900 rounded">All</button>
+      <button onclick="filterTimeline('prewar')" class="text-xs px-3 py-1 bg-slate-800 hover:bg-red-900 rounded">Pre-WWII</button>
+      <button onclick="filterTimeline('coldwar')" class="text-xs px-3 py-1 bg-slate-800 hover:bg-red-900 rounded">Cold War</button>
+      <button onclick="filterTimeline('post')" class="text-xs px-3 py-1 bg-slate-800 hover:bg-red-900 rounded">Post-1991 Legacy</button>
+      <button onclick="filterTimeline('1917')" class="text-xs px-3 py-1 bg-slate-700 hover:bg-red-900 rounded">1917 Revolution</button>
+      <button onclick="filterTimeline('1930')" class="text-xs px-3 py-1 bg-slate-700 hover:bg-red-900 rounded">1930s Purges</button>
+      <button onclick="jumpToYear('1945')" class="text-xs px-3 py-1 bg-slate-700 hover:bg-red-900 rounded">1945</button>
+      <button onclick="jumpToYear('1958')" class="text-xs px-3 py-1 bg-slate-700 hover:bg-red-900 rounded">1958 Great Leap</button>
+      <button onclick="jumpToYear('1975')" class="text-xs px-3 py-1 bg-slate-700 hover:bg-red-900 rounded">1975 Khmer Rouge</button>
+    </div>
+
+    <div class="timeline mt-6">
       <!-- Pre-1917 -->
-      <div class="timeline-item">
+      <div class="timeline-item reveal">
         <div class="accordion-header">
           <span class="year">1848</span>
           <span class="title">The Communist Manifesto Published</span>
@@ -56,7 +100,7 @@
       </div>
 
       <!-- 1917 -->
-      <div class="timeline-item">
+      <div class="timeline-item reveal">
         <div class="accordion-header">
           <span class="year">1917</span>
           <span class="title">Bolshevik Revolution</span>
@@ -72,7 +116,7 @@
       </div>
 
       <!-- 1918-1922 -->
-      <div class="timeline-item">
+      <div class="timeline-item reveal">
         <div class="accordion-header">
           <span class="year">1918–1922</span>
           <span class="title">Russian Civil War & Red Terror</span>
@@ -82,12 +126,13 @@
           <p>The Bolsheviks wage a brutal civil war against anti-communist White forces, foreign interventions, and internal opponents. Lenin launches the Red Terror in response to assassination attempts, resulting in mass executions, hostage-taking, and concentration camps. Estimates of deaths from the period reach 7-10 million, including combat, famine, disease, and deliberate killings. The Cheka executes tens of thousands.</p>
           <div class="callout mt-2 text-sm">
             <strong>Lenin on terror (1918):</strong> “Let us put the speculators against the wall... We must make examples.”
+            <button onclick="window.shareFact('Lenin: “Let us put the speculators against the wall... We must make examples.”')" class="ml-1 text-xs text-red-400 hover:text-red-300">share</button>
           </div>
         </div>
       </div>
 
       <!-- 1921-1922 -->
-      <div class="timeline-item">
+      <div class="timeline-item reveal">
         <div class="accordion-header">
           <span class="year">1921–1922</span>
           <span class="title">Russian Famine</span>
@@ -99,7 +144,7 @@
       </div>
 
       <!-- 1922 -->
-      <div class="timeline-item">
+      <div class="timeline-item reveal">
         <div class="accordion-header">
           <span class="year">1922</span>
           <span class="title">Formation of the USSR</span>
@@ -111,7 +156,7 @@
       </div>
 
       <!-- 1924 -->
-      <div class="timeline-item">
+      <div class="timeline-item reveal">
         <div class="accordion-header">
           <span class="year">1924</span>
           <span class="title">Lenin's Death and Power Struggle</span>
@@ -123,7 +168,7 @@
       </div>
 
       <!-- 1928-1932 -->
-      <div class="timeline-item">
+      <div class="timeline-item reveal">
         <div class="accordion-header">
           <span class="year">1928–1932</span>
           <span class="title">First Five-Year Plan and Collectivization</span>
@@ -135,7 +180,7 @@
       </div>
 
       <!-- 1932-1933 -->
-      <div class="timeline-item">
+      <div class="timeline-item reveal">
         <div class="accordion-header">
           <span class="year">1932–1933</span>
           <span class="title">Holodomor (Ukrainian Famine)</span>
@@ -150,7 +195,7 @@
       </div>
 
       <!-- 1934-1939 -->
-      <div class="timeline-item">
+      <div class="timeline-item reveal">
         <div class="accordion-header">
           <span class="year">1934–1939</span>
           <span class="title">Great Purge (Great Terror)</span>
@@ -165,7 +210,7 @@
       </div>
 
       <!-- 1930s-1950s -->
-      <div class="timeline-item">
+      <div class="timeline-item reveal">
         <div class="accordion-header">
           <span class="year">1930s–1950s</span>
           <span class="title">Gulag Expansion</span>
@@ -177,7 +222,7 @@
       </div>
 
       <!-- 1939 -->
-      <div class="timeline-item">
+      <div class="timeline-item reveal">
         <div class="accordion-header">
           <span class="year">1939</span>
           <span class="title">Molotov-Ribbentrop Pact and WWII</span>
@@ -189,7 +234,7 @@
       </div>
 
       <!-- 1945-1948 -->
-      <div class="timeline-item">
+      <div class="timeline-item reveal">
         <div class="accordion-header">
           <span class="year">1945–1948</span>
           <span class="title">Soviet Domination of Eastern Europe</span>
@@ -201,7 +246,7 @@
       </div>
 
       <!-- 1949 -->
-      <div class="timeline-item">
+      <div class="timeline-item reveal">
         <div class="accordion-header">
           <span class="year">1949</span>
           <span class="title">Communist Victory in China</span>
@@ -213,7 +258,7 @@
       </div>
 
       <!-- 1950-1953 -->
-      <div class="timeline-item">
+      <div class="timeline-item reveal">
         <div class="accordion-header">
           <span class="year">1950–1953</span>
           <span class="title">Korean War</span>
@@ -225,7 +270,7 @@
       </div>
 
       <!-- 1956 -->
-      <div class="timeline-item">
+      <div class="timeline-item reveal">
         <div class="accordion-header">
           <span class="year">1956</span>
           <span class="title">Khrushchev's Secret Speech and Hungarian Uprising</span>
@@ -237,7 +282,7 @@
       </div>
 
       <!-- 1958-1962 -->
-      <div class="timeline-item">
+      <div class="timeline-item reveal">
         <div class="accordion-header">
           <span class="year">1958–1962</span>
           <span class="title">Great Leap Forward (China)</span>
@@ -252,7 +297,7 @@
       </div>
 
       <!-- 1961 -->
-      <div class="timeline-item">
+      <div class="timeline-item reveal">
         <div class="accordion-header">
           <span class="year">1961</span>
           <span class="title">Berlin Wall Built</span>
@@ -264,7 +309,7 @@
       </div>
 
       <!-- 1966-1976 -->
-      <div class="timeline-item">
+      <div class="timeline-item reveal">
         <div class="accordion-header">
           <span class="year">1966–1976</span>
           <span class="title">Cultural Revolution (China)</span>
@@ -279,7 +324,7 @@
       </div>
 
       <!-- 1975-1979 -->
-      <div class="timeline-item">
+      <div class="timeline-item reveal">
         <div class="accordion-header">
           <span class="year">1975–1979</span>
           <span class="title">Khmer Rouge Regime (Cambodia)</span>
@@ -294,7 +339,7 @@
       </div>
 
       <!-- 1979 -->
-      <div class="timeline-item">
+      <div class="timeline-item reveal">
         <div class="accordion-header">
           <span class="year">1979</span>
           <span class="title">Soviet Invasion of Afghanistan</span>
@@ -306,7 +351,7 @@
       </div>
 
       <!-- 1980s -->
-      <div class="timeline-item">
+      <div class="timeline-item reveal">
         <div class="accordion-header">
           <span class="year">1980s</span>
           <span class="title">Solidarity Movement in Poland</span>
@@ -318,7 +363,7 @@
       </div>
 
       <!-- 1989-1991 -->
-      <div class="timeline-item">
+      <div class="timeline-item reveal">
         <div class="accordion-header">
           <span class="year">1989–1991</span>
           <span class="title">Fall of Communism in Eastern Europe & USSR Dissolution</span>
@@ -330,7 +375,7 @@
       </div>
 
       <!-- Post-1991 -->
-      <div class="timeline-item">
+      <div class="timeline-item reveal">
         <div class="accordion-header">
           <span class="year">1990s–Present</span>
           <span class="title">Ongoing Communist Rule and Adaptations</span>
@@ -341,7 +386,7 @@
         </div>
       </div>
 
-      <div class="timeline-item">
+      <div class="timeline-item reveal">
         <div class="accordion-header">
           <span class="year">Present Day</span>
           <span class="title">Current Communist States</span>

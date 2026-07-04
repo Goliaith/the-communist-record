@@ -20,16 +20,41 @@
             <span class="font-semibold text-xl tracking-tight">The Communist Record</span>
           </div>
         </div>
-        <div class="flex items-center gap-x-1 text-sm">
+        <div class="flex items-center gap-x-2 text-sm">
           <a href="index.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Home</a>
-          <a href="origins.html" class="nav-active px-3 py-1.5 rounded">Origins</a>
-          <a href="timeline.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">History</a>
-          <a href="regimes.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Regimes</a>
-          <a href="human-cost.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Human Cost</a>
-          <a href="why-it-fails.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Why It Fails</a>
-          <a href="modern-risks.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Modern Risks</a>
-          <a href="current-groups.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Current Groups</a>
+
+          <!-- Historical Record Dropdown -->
+          <div class="relative group">
+            <div class="px-3 py-1.5 hover:bg-slate-800 rounded cursor-pointer flex items-center gap-1 select-none">
+              Historical Record
+              <span class="text-xs opacity-70">▼</span>
+            </div>
+            <div class="absolute left-0 top-full hidden group-hover:block bg-slate-900 border border-slate-700 rounded-xl shadow-xl w-48 z-50 py-1">
+              <a href="origins.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Origins</a>
+              <a href="timeline.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Timeline</a>
+              <a href="regimes.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Regimes</a>
+              <a href="human-cost.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Human Cost</a>
+              <a href="why-it-fails.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Why It Fails</a>
+            </div>
+          </div>
+
+          <!-- Modern Context Dropdown -->
+          <div class="relative group">
+            <div class="px-3 py-1.5 hover:bg-slate-800 rounded cursor-pointer flex items-center gap-1 select-none">
+              Modern Context
+              <span class="text-xs opacity-70">▼</span>
+            </div>
+            <div class="absolute left-0 top-full hidden group-hover:block bg-slate-900 border border-slate-700 rounded-xl shadow-xl w-48 z-50 py-1">
+              <a href="modern-risks.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Modern Risks</a>
+              <a href="current-groups.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Current Groups</a>
+              <a href="funding.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Funding</a>
+            </div>
+          </div>
+
           <a href="sources.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Sources</a>
+
+          <!-- Quick global search (modern attention + utility) -->
+          <input type="text" placeholder="Search site..." class="ml-2 text-xs bg-slate-900 border border-slate-700 focus:border-red-800 px-3 py-1 rounded w-28 focus:w-40 transition-all outline-none" onkeydown="if (event.key === 'Enter' && this.value.trim()) window.location.href='sources.html#search-' + encodeURIComponent(this.value)">
         </div>
       </div>
     </div>
@@ -44,6 +69,12 @@
       <div class="img-caption">Karl Marx (1818–1883), co-author of the Communist Manifesto</div>
     </div>
 
+    <!-- Modern Lens -->
+    <div class="mb-6 p-4 bg-slate-900 border border-red-900/50 rounded-xl text-sm">
+      <span class="text-red-400 text-xs">MODERN LENS</span><br>
+      Core ideas from the Manifesto — abolition of private property, class-based analysis of society, and the need to dismantle existing institutions — continue to appear in contemporary activist language and policy proposals.
+    </div>
+
     <div class="mt-8">
       <h2>Karl Marx and Friedrich Engels</h2>
       <p>Marx (1818–1883) and Engels developed a theory of history centered on class struggle. In their view, the history of all existing society is the history of struggles between oppressors and oppressed. They argued that capitalism would inevitably be overthrown by the proletariat (working class), leading to a classless, stateless society — communism.</p>
@@ -52,6 +83,7 @@
         <strong>From the Communist Manifesto (1848):</strong><br>
         “The history of all hitherto existing society is the history of class struggles.”<br><br>
         “The Communists openly declare that their ends can be attained only by the forcible overthrow of all existing social conditions.”
+        <button onclick="window.shareFact('Communist Manifesto: \"The history of all hitherto existing society is the history of class struggles.\"')" class="block mt-2 text-xs text-red-400 hover:text-red-300">Share this quote →</button>
       </div>
 
       <h3>More Key Quotes from Marx and Engels</h3>

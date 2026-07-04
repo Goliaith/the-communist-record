@@ -20,16 +20,38 @@
             <span class="font-semibold text-xl tracking-tight">The Communist Record</span>
           </div>
         </div>
-        <div class="flex items-center gap-x-1 text-sm">
+        <div class="flex items-center gap-x-2 text-sm">
           <a href="index.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Home</a>
-          <a href="origins.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Origins</a>
-          <a href="timeline.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">History</a>
-          <a href="regimes.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Regimes</a>
-          <a href="human-cost.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Human Cost</a>
-          <a href="why-it-fails.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Why It Fails</a>
-          <a href="modern-risks.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Modern Risks</a>
-          <a href="current-groups.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Current Groups</a>
-          <a href="sources.html" class="nav-active px-3 py-1.5 rounded">Sources</a>
+
+          <!-- Historical Record Dropdown -->
+          <div class="relative group">
+            <div class="px-3 py-1.5 hover:bg-slate-800 rounded cursor-pointer flex items-center gap-1 select-none">
+              Historical Record
+              <span class="text-xs opacity-70">▼</span>
+            </div>
+            <div class="absolute left-0 top-full hidden group-hover:block bg-slate-900 border border-slate-700 rounded-xl shadow-xl w-48 z-50 py-1">
+              <a href="origins.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Origins</a>
+              <a href="timeline.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Timeline</a>
+              <a href="regimes.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Regimes</a>
+              <a href="human-cost.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Human Cost</a>
+              <a href="why-it-fails.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Why It Fails</a>
+            </div>
+          </div>
+
+          <!-- Modern Context Dropdown -->
+          <div class="relative group">
+            <div class="px-3 py-1.5 hover:bg-slate-800 rounded cursor-pointer flex items-center gap-1 select-none">
+              Modern Context
+              <span class="text-xs opacity-70">▼</span>
+            </div>
+            <div class="absolute left-0 top-full hidden group-hover:block bg-slate-900 border border-slate-700 rounded-xl shadow-xl w-48 z-50 py-1">
+              <a href="modern-risks.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Modern Risks</a>
+              <a href="current-groups.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Current Groups</a>
+              <a href="funding.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Funding</a>
+            </div>
+          </div>
+
+          <a href="sources.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Sources</a>
         </div>
       </div>
     </div>
@@ -37,7 +59,10 @@
 
   <div class="max-w-5xl mx-auto px-6 pt-8 pb-16">
     <h1 class="text-4xl font-bold tracking-tight mb-4">Sources & References</h1>
+    <input id="sources-search" type="text" placeholder="Filter sources..." class="w-full max-w-sm mb-4 px-4 py-2 bg-slate-900 border border-slate-700 rounded text-sm">
     <p>This site draws on the following major works and resources. All claims should be verified against the original sources.</p>
+
+    <div id="sources-list">
 
     <div class="mt-8">
       <h2>Major Compilations</h2>
@@ -83,7 +108,8 @@
         <li>Heritage Foundation reports on cultural Marxism and institutional influence</li>
         <li>Works tracing the influence of Critical Theory in education and policy</li>
         <li>Democratic Socialists of America (DSA) official platform and program documents: https://www.dsausa.org/about-us/what-is-democratic-socialism/ and https://platform.dsausa.org/</li>
-        <li>DSA caucus statements: Red Star Caucus (https://redstarcaucus.org/points-of-unity/), Communist Caucus (https://communistcaucus.com/), Marxist Unity Group</li>
+        <li>DSA caucus statements: Red Star Caucus (https://redstarcaucus.org/points-of-unity/), Communist Caucus (https://communistcaucus.com/)</li>
+        <li>Other communist organizations: Communist Party USA program (https://cpusa.org/), Party for Socialism and Liberation (https://pslweb.org/ and https://liberationnews.org/), Workers World Party (https://www.workers.org/), Freedom Road Socialist Organization (https://frso.org/), Revolutionary Communists of America (https://communistusa.org/), American Party of Labor (https://www.americanpartyoflabor.com/)</li>
         <li>DSA history and strategy documents noting engagement with Marxist traditions</li>
         <li>Additional: Books and reports on 21st-century examples (e.g., Venezuela's collapse, China's surveillance state, North Korean defector accounts)</li>
       </ul>
@@ -106,6 +132,10 @@
       Educational purposes only. This bibliography is provided to support verification of the content on this site.
     </div>
   </div>
+
+  <script>
+    if (typeof window.initSourcesSearch === 'function') window.initSourcesSearch();
+  </script>
 
   <footer class="border-t border-slate-700 py-6 text-center text-xs text-slate-500 max-w-7xl mx-auto px-8">
     Educational use only. Communism's record should be judged by its actual results.

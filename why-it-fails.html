@@ -21,16 +21,41 @@
             <span class="font-semibold text-xl tracking-tight">The Communist Record</span>
           </div>
         </div>
-        <div class="flex items-center gap-x-1 text-sm">
+        <div class="flex items-center gap-x-2 text-sm">
           <a href="index.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Home</a>
-          <a href="origins.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Origins</a>
-          <a href="timeline.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">History</a>
-          <a href="regimes.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Regimes</a>
-          <a href="human-cost.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Human Cost</a>
-          <a href="why-it-fails.html" class="nav-active px-3 py-1.5 rounded">Why It Fails</a>
-          <a href="modern-risks.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Modern Risks</a>
-          <a href="current-groups.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Current Groups</a>
+
+          <!-- Historical Record Dropdown -->
+          <div class="relative group">
+            <div class="px-3 py-1.5 hover:bg-slate-800 rounded cursor-pointer flex items-center gap-1 select-none">
+              Historical Record
+              <span class="text-xs opacity-70">▼</span>
+            </div>
+            <div class="absolute left-0 top-full hidden group-hover:block bg-slate-900 border border-slate-700 rounded-xl shadow-xl w-48 z-50 py-1">
+              <a href="origins.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Origins</a>
+              <a href="timeline.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Timeline</a>
+              <a href="regimes.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Regimes</a>
+              <a href="human-cost.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Human Cost</a>
+              <a href="why-it-fails.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Why It Fails</a>
+            </div>
+          </div>
+
+          <!-- Modern Context Dropdown -->
+          <div class="relative group">
+            <div class="px-3 py-1.5 hover:bg-slate-800 rounded cursor-pointer flex items-center gap-1 select-none">
+              Modern Context
+              <span class="text-xs opacity-70">▼</span>
+            </div>
+            <div class="absolute left-0 top-full hidden group-hover:block bg-slate-900 border border-slate-700 rounded-xl shadow-xl w-48 z-50 py-1">
+              <a href="modern-risks.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Modern Risks</a>
+              <a href="current-groups.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Current Groups</a>
+              <a href="funding.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Funding</a>
+            </div>
+          </div>
+
           <a href="sources.html" class="px-3 py-1.5 hover:bg-slate-800 rounded">Sources</a>
+
+          <!-- Quick global search (modern attention + utility) -->
+          <input type="text" placeholder="Search site..." class="ml-2 text-xs bg-slate-900 border border-slate-700 focus:border-red-800 px-3 py-1 rounded w-28 focus:w-40 transition-all outline-none" onkeydown="if (event.key === 'Enter' && this.value.trim()) window.location.href='sources.html#search-' + encodeURIComponent(this.value)">
         </div>
       </div>
     </div>
@@ -69,27 +94,29 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <!-- Reason 1 -->
-        <div class="reason-card">
+        <div class="reason-card reveal">
           <div class="reason-title">1. The Economic Calculation Problem</div>
           <p class="text-sm text-slate-300">Without private property and free market prices, planners have no way to know the relative scarcity or value of resources. Mises showed in 1920 that rational allocation becomes impossible at scale. Shortages, surpluses, and waste are inevitable.</p>
           <div class="quote">
             “Where there is no free market, there is no pricing mechanism; without a pricing mechanism, there is no economic calculation.”<br>
             <span class="text-xs">— Ludwig von Mises, 1920</span>
+            <button onclick="window.shareFact('Mises: “Where there is no free market, there is no pricing mechanism...”')" class="ml-1 text-xs text-red-400 hover:text-red-300">share</button>
           </div>
         </div>
 
         <!-- Reason 2 -->
-        <div class="reason-card">
+        <div class="reason-card reveal">
           <div class="reason-title">2. Destruction of Incentives</div>
           <p class="text-sm text-slate-300">When the state claims the fruits of labor and punishes success, people produce less, innovate less, and take fewer risks. Effort is decoupled from reward. This universal incentive failure appears in every large-scale attempt.</p>
           <div class="quote">
             “The more the state ‘plans’ the more difficult planning becomes for the individual.”<br>
             <span class="text-xs">— Friedrich Hayek</span>
+            <button onclick="window.shareFact('Hayek: “The more the state ‘plans’ the more difficult planning becomes for the individual.”')" class="ml-1 text-xs text-red-400 hover:text-red-300">share</button>
           </div>
         </div>
 
         <!-- Reason 3 -->
-        <div class="reason-card">
+        <div class="reason-card reveal">
           <div class="reason-title">3. Concentration of Total Power</div>
           <p class="text-sm text-slate-300">Giving one party monopoly control over economy and state invites corruption and tyranny. The ideology frames opponents as class enemies who must be eliminated. “The dictatorship of the proletariat” reliably becomes dictatorship by the party elite.</p>
           <div class="quote">
@@ -99,7 +126,7 @@
         </div>
 
         <!-- Reason 4 -->
-        <div class="reason-card">
+        <div class="reason-card reveal">
           <div class="reason-title">4. Suppression of Truth</div>
           <p class="text-sm text-slate-300">If the ideology is declared scientifically true and historically inevitable, any failure or dissent must be sabotage or false consciousness. This produces censorship, propaganda, show trials, and the persecution of independent thinkers and scientists.</p>
           <div class="quote">
@@ -120,13 +147,19 @@
       </div>
     </div>
 
+    <!-- Modern Lens -->
+    <div class="mb-6 p-4 bg-slate-900 border border-red-900/50 rounded-xl text-sm">
+      <span class="text-red-400 text-xs">MODERN LENS</span><br>
+      The same central planning impulse reappears in net-zero mandates, rent control, and “equity” allocation of resources — ignoring local knowledge and price signals.
+    </div>
+
     <!-- Real World Evidence -->
     <div class="mb-12">
       <div class="uppercase text-xs tracking-[2px] text-red-400 mb-3">THE NUMBERS DON'T LIE</div>
       <h2 class="text-2xl font-semibold tracking-tight mb-4">Real-World Evidence: Market vs. Command Systems</h2>
 
       <!-- Stat Grid -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8 reveal">
         <div class="stat-card card">
           <div class="text-4xl font-bold text-emerald-400">~3×</div>
           <div class="text-xs text-slate-400 mt-1">West German GDP per capita vs East Germany by 1989</div>
