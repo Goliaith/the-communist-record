@@ -15,6 +15,7 @@ Then open http://localhost:8080
 - timeline.html — Historical timeline
 - regimes.html — Major communist states
 - human-cost.html — Death tolls and suffering
+- atrocities.html — Cheka / Bolshevik methods (Grok-confirmed historical accounts)
 - why-it-fails.html — Structural reasons for failure
 - modern-risks.html — Risks to Western civilization today
 - current-groups.html — Current organizations and movements
@@ -118,6 +119,7 @@ Then open http://localhost:8080
 - timeline.html — Historical timeline (collapsible)
 - regimes.html — Major regimes + economic analysis + charts
 - human-cost.html — Human cost with visuals and charts
+- atrocities.html — Atrocities: Cheka methods, Nazino, NKVD gas wagons
 - why-it-fails.html — Why communism fails (with comparisons)
 - modern-risks.html — Modern ideological risks
 - current-groups.html — Current organizations and movements

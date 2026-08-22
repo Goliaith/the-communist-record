@@ -22,6 +22,7 @@ const NAV_HTML = `
             <a href="timeline.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Timeline</a>
             <a href="regimes.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Regimes</a>
             <a href="human-cost.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Human Cost</a>
+            <a href="atrocities.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Atrocities</a>
             <a href="why-it-fails.html" class="block px-4 py-2 text-sm hover:bg-slate-800">Why It Fails</a>
           </div>
         </div>
@@ -54,6 +55,7 @@ const NAV_HTML = `
       <a href="timeline.html">Timeline</a>
       <a href="regimes.html">Regimes</a>
       <a href="human-cost.html">Human Cost</a>
+      <a href="atrocities.html">Atrocities</a>
       <a href="why-it-fails.html">Why It Fails</a>
       <div class="nav-mobile-label">Modern Context</div>
       <a href="modern-risks.html">Modern Risks</a>
@@ -467,6 +469,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const pages = [
       { title: "Human Cost", url: "human-cost.html", keywords: "deaths 94m famine gulag cambodia" },
+      { title: "Atrocities", url: "atrocities.html", keywords: "cheka red terror torture nazino dushegubka melgunov clergy crucifixion" },
       { title: "Why It Fails", url: "why-it-fails.html", keywords: "calculation incentives stagnation comparison" },
       { title: "Modern Risks", url: "modern-risks.html", keywords: "dsa cultural marxism institutions" },
       { title: "Current Groups", url: "current-groups.html", keywords: "psl cpusa wwp frso funding singham" },
