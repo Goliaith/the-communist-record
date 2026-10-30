@@ -4,6 +4,7 @@
   "buildCommand": "",
   "outputDirectory": ".",
   "routes": [
+    { "src": "^/index\\.html$", "status": 308, "headers": { "Location": "/" } },
     { "src": "/(.*)", "dest": "/$1" }
   ]
 }
